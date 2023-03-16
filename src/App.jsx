@@ -18,15 +18,13 @@ function App() {
     <>
   <Navbar />
         <Routes>
-          <Route path="/" >
-            <Route index element={ <Inicio /> } />
-            <Route path="/masnuevo" element={ <MasNuevo /> } />
-            <Route path="/masvendido" element={ <MasVendido /> } />
-            <Route path='/blog' element={ <Blog /> } />
-            <Route path='/cara' element={ <Cara /> } />
-            <Route path='/labios' element={ <Labios /> } />
-            <Route path='/ojos' element={ <Ojos /> } />
-          </Route>
+            <Route path='/bellezaProject/' element={ <Inicio /> } />
+            <Route path="/bellezaProject/masnuevo" element={ <MasNuevo /> } />
+            <Route path="/bellezaProject/masvendido" element={ <MasVendido /> } />
+            <Route path='/bellezaProject/blog' element={ <Blog /> } />
+            <Route path='/bellezaProject/cara' element={ <Cara /> } />
+            <Route path='/bellezaProject/labios' element={ <Labios /> } />
+            <Route path='/bellezaProject/ojos' element={ <Ojos /> } />
           </Routes>
     </>
   )
