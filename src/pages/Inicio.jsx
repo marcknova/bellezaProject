@@ -25,7 +25,7 @@ const Inicio = () => {
             <img src={IMG0} className='h-full' />
           </div>
         </div>
-        <div className='w-full h-full p-5'>
+        <div className='w-full h-full p-5' id='masvendido'>
           <div className='py-5 my-5'>
           <h2 className='text-center text-xl p-2'>Imprescindibles</h2>
           <h1 className='text-center font-bold text-4xl'>
@@ -33,65 +33,74 @@ const Inicio = () => {
             <span className='title font-normal'> Vendidos</span>
           </h1>
           </div>
-          <div className='flex p-2 justify-around '>
-            <div className='w-[190px] h-[190px]'>
-              <div className='w-full h-full'>
+          <div className='flex p-2 m-3 justify-around '>
+            <div>
+              <div className='w-[190px] h-[190px]'>
                 <img src={IMG1} className='w-full h-full p-5' />
               </div>
-              <div className='w-full h-full'>
+              <div >
                 <h2>Rimel de no se que</h2>
                 <span>$54.00</span>
               </div>
             </div>
-            <div className='w-[190px] h-[190px]'>
-              <div className='w-full h-full'>
+            <div>
+              <div className='w-[190px] h-[190px]'>
                 <img src={IMG2} className='w-full h-full p-5' />
               </div>
-              <div className='w-full h-full'>
+              <div>
                 <h2>Rimel de no se que</h2>
                 <span>$54.00</span>
               </div>
             </div>
-            <div className='w-[190px] h-[190px]'>
-              <div className='w-full h-full'>
+            <div>
+              <div className='w-[190px] h-[190px]'>
                 <img src={IMG3} className='w-full h-full p-5' />
               </div>
-              <div className='w-full h-full'>
+              <div>
                 <h2>Rimel de no se que</h2>
                 <span>$54.00</span>
               </div>
             </div>
-            <div className='w-[190px] h-[190px]'>
-              <div className='w-full h-full'>
+            <div>
+              <div className='w-[190px] h-[190px]'>
                 <img src={IMG4} className='w-full h-full p-5' />
               </div>
-              <div className='w-full h-full'>
+              <div>
                 <h2>Rimel de no se que</h2>
                 <span>$54.00</span>
               </div>
             </div>
-            <div className='w-[190px] h-[190px]'>
-              <div className='w-full h-full'>
+            <div>
+              <div className='w-[190px] h-[190px]'>
                 <img src={IMG5} className='w-full h-full p-5' />
               </div>
-              <div className='w-full h-full'>
+              <div>
                 <h2>Rimel de no se que</h2>
                 <span>$54.00</span>
               </div>
             </div>
-            <div className='w-[190px] h-[190px]'>
-              <div className='w-full h-full'>
+            <div>
+              <div className='w-[190px] h-[190px]'>
                 <img src={IMG6} className='w-full h-full p-5' />
               </div>
-              <div className='w-full h-full'>
+              <div>
                 <h2>Rimel de no se que</h2>
                 <span>$54.00</span>
               </div>
             </div>
 
           </div>
+          <div className='text-center my-5'>
+            <button className='border-black border-[1px] w-56 h-10'>Comprar mas vendidos</button>
+          </div>
+        </div>
+        <div>
           <div>
-            <button>Comprar mas vendidos</button>
+            <div>
+              <h1>Labios mas brillosos</h1>
+              <p>lorem input dolor sit ampet</p>
+            </div>
+            <div></div>
           </div>
         </div>
     </div>
