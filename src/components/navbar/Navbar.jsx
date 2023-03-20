@@ -9,13 +9,37 @@ const Navbar = () => {
                 <h1 className="text-2xl font-bold">Logo</h1>
               </Link>
             </div>
-            <ul className="list-none flex space-x-7 p-2 mt-2">
-                    <Link to="/bellezaProject/masnuevo">Lo mas nuevo</Link>
-                    <Link to="/bellezaProject/masvendido">Mas vendido</Link>
-                    <Link to="/bellezaProject/blog">Blog</Link>
-                    <Link to="/bellezaProject/cara">Cara</Link>
-                    <Link to="/bellezaProject/labios">Labios</Link>
-                    <Link to="/bellezaProject/ojos">Ojos</Link>
+            <ul className="list-none flex ">
+              <li className="hover:bg-[#e0acfc] hover:font-semibold ease-in duration-100 cursor-pointer">
+                <div className="p-4">
+                  <Link to="/bellezaProject/masnuevo">Lo mas nuevo</Link>
+                </div>
+              </li>
+              <li className="hover:bg-[#e0acfc] hover:font-semibold ease-in duration-100 cursor-pointer">
+                <div className="p-4">
+                  <Link to="/bellezaProject/masvendido">Mas vendido</Link>
+                </div>
+              </li>
+              <li className="hover:bg-[#e0acfc] hover:font-semibold ease-in duration-100 cursor-pointer">
+                <div className="p-4">
+                  <Link to="/bellezaProject/blog">Blog</Link>
+                </div>
+              </li>
+              <li className="hover:bg-[#e0acfc] hover:font-semibold ease-in duration-100 cursor-pointer">
+                <div className="p-4">
+                  <Link to="/bellezaProject/cara">Cara</Link>
+                </div>
+              </li>
+              <li className="hover:bg-[#e0acfc] hover:font-semibold ease-in duration-100 cursor-pointer">
+                <div className="p-4">
+                  <Link to="/bellezaProject/labios">Labios</Link>
+                </div>
+              </li>
+              <li className="hover:bg-[#e0acfc] hover:font-semibold ease-in duration-100 cursor-pointer">
+                <div className="p-4">
+                  <Link to="/bellezaProject/ojos">Ojos</Link>
+                </div>
+              </li>
             </ul>
             <div className="p-2 m-2">
                 <span className="mx-5"><i className="fa-solid fa-user"></i></span>

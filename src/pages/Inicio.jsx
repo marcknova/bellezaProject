@@ -5,6 +5,9 @@ import IMG3 from '../assets/3.jpg';
 import IMG4 from '../assets/4.jpg';
 import IMG5 from '../assets/5.jpg';
 import IMG6 from '../assets/6.jpg';
+import IMG7 from '../assets/7.jpg';
+import IMG8 from '../assets/8.jpg';
+import IMG9 from '../assets/9.jpg';
 
 const Inicio = () => {
   return (
@@ -25,7 +28,7 @@ const Inicio = () => {
             <img src={IMG0} className='h-full' />
           </div>
         </div>
-        <div className='w-full h-full p-5' id='masvendido'>
+        <div className='w-full h-full p-2 mb-10' id='masvendido'>
           <div className='py-5 my-5'>
           <h2 className='text-center text-xl p-2'>Imprescindibles</h2>
           <h1 className='text-center font-bold text-4xl'>
@@ -33,7 +36,7 @@ const Inicio = () => {
             <span className='title font-normal'> Vendidos</span>
           </h1>
           </div>
-          <div className='flex p-2 m-3 justify-around '>
+          <div className='flex flex-wrap p-2 m-3 justify-around '>
             <div>
               <div className='w-[190px] h-[190px]'>
                 <img src={IMG1} className='w-full h-full p-5' />
@@ -93,14 +96,29 @@ const Inicio = () => {
           <div className='text-center my-5'>
             <button className='border-black border-[1px] w-56 h-10'>Comprar mas vendidos</button>
           </div>
-        </div>
-        <div>
-          <div>
-            <div>
-              <h1>Labios mas brillosos</h1>
-              <p>lorem input dolor sit ampet</p>
+        </div>  
+        <div id='thirdSection'>
+          <div className='flex mb-5'>
+            <div className='bg-[#e5b3fe] w-[50%] h-[30rem]'>
+              <div className='p-5 m-20'>
+                <h1 className='font-extrabold text-2xl my-4 ml-10'>Labios mas brillosos</h1>
+                <p className='mx-10'> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+              <button className='my-5 ml-10'>Comprar Labiales</button>
+              </div>
             </div>
-            <div></div>
+            <div className='absolute right-20 w-[40rem] h-[21rem]'>
+              <img src={IMG7} className='w-full h-full mt-16' />
+            </div>
+          </div>
+          <div>
+          </div>
+        </div>
+        <div id='fourthSection'>
+          <div className='p-5 '>
+            <h1 className='text-center'>Descubre Mas</h1>
+          </div>
+          <div>
+
           </div>
         </div>
     </div>
