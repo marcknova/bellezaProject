@@ -98,16 +98,16 @@ const Inicio = () => {
           </div>
         </div>  
         <div id='thirdSection'>
-          <div className='flex mb-5'>
-            <div className='bg-[#e5b3fe] w-[50%] h-[30rem]'>
-              <div className='p-5 m-20'>
+          <div className='flex mb-5 h-full md:h-[30rem]'>
+            <div className='bg-[#e5b3fe] w-[50%] h-full'>
+              <div className='p-6 m-auto'>
                 <h1 className='font-extrabold text-2xl my-4 ml-10'>Labios mas brillosos</h1>
                 <p className='mx-10'> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
               <button className='my-5 ml-10'>Comprar Labiales</button>
               </div>
             </div>
-            <div className='absolute right-20 w-[50%] h-[60%]'>
-              <img src={IMG7} className='w-full h-full mt-16' />
+            <div className='absolute right-20 w-[50%] min-h-[50%]'>
+              <img src={IMG7} className='w-full h-full mt-10' />
             </div>
           </div>
           <div>
@@ -115,10 +115,22 @@ const Inicio = () => {
         </div>
         <div id='fourthSection'>
           <div className='p-5 '>
-            <h1 className='text-center'>Descubre Mas</h1>
+            <h1 className='text-center font-bold text-2xl'>Descubre Mas</h1>
           </div>
-          <div>
-
+            <div className='h-[38rem] bg-[#ff97d9]'>
+                <div className='flex justify-evenly'>
+                  <div className='w-[345px] h-[520px]'>
+                    <img src={IMG8} className='w-full h-full' />
+                  </div>
+                  <div className='w-[345px] h-[520px]'>
+                    <img src={IMG9} className='w-full h-full' />
+                  </div>
+                  <div className='w-[345px] h-[520px]'>
+                    <img src={IMG8} className='w-full h-full' />
+                  </div>
+                </div>
+            </div>
+          <div className='w-full h-20 relative bottom-0 bg-[#e5b3fe]'>
           </div>
         </div>
     </div>
