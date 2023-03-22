@@ -106,7 +106,7 @@ const Inicio = () => {
               <button className='my-5 ml-10'>Comprar Labiales</button>
               </div>
             </div>
-            <div className='absolute right-20 w-[40rem] h-[21rem]'>
+            <div className='absolute right-20 w-[50%] h-[60%]'>
               <img src={IMG7} className='w-full h-full mt-16' />
             </div>
           </div>
