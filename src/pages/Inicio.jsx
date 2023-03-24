@@ -8,6 +8,7 @@ import IMG6 from '../assets/6.jpg';
 import IMG7 from '../assets/7.jpg';
 import IMG8 from '../assets/8.jpg';
 import IMG9 from '../assets/9.jpg';
+import IMG10 from '../assets/10.jpg';
 
 const Inicio = () => {
   return (
@@ -117,20 +118,30 @@ const Inicio = () => {
           <div className='p-5 '>
             <h1 className='text-center font-bold text-2xl'>Descubre Mas</h1>
           </div>
-            <div className='h-[38rem] bg-[#ff97d9]'>
-                <div className='flex justify-evenly'>
-                  <div className='w-[345px] h-[520px]'>
-                    <img src={IMG8} className='w-full h-full' />
+            <div className='h-[38rem] bg-[#ff97d9]'> 
+            <div className='h-[38rem] relative z-10'>
+                  <div className='flex md:flex-row flex-col justify-evenly'>
+                    <div className='md:w-[345px] md:h-[520px] w-[320px] h-[300px]'>
+                      <img src={IMG8} className='w-full h-full' />
+                    </div>
+                    <div className='md:w-[345px] md:h-[520px] w-[320px] h-[300px]'>
+                      <img src={IMG9} className='w-full h-full' />
+                    </div>
+                    <div className='md:w-[345px] md:h-[520px] w-[320px] h-[300px]'>
+                      <img src={IMG8} className='w-full h-full' />
+                    </div>
                   </div>
-                  <div className='w-[345px] h-[520px]'>
-                    <img src={IMG9} className='w-full h-full' />
-                  </div>
-                  <div className='w-[345px] h-[520px]'>
-                    <img src={IMG8} className='w-full h-full' />
-                  </div>
-                </div>
+            </div> 
+              <div className='bg-[#e5b3fe] h-96 relative bottom-[23rem]'>    
+              </div>
             </div>
-          <div className='w-full h-20 relative bottom-0 bg-[#e5b3fe]'>
+        </div>
+        <div id='fiveSection'>
+          <div>
+            <img src={IMG10} className='w-full h-full' />
+          </div>
+          <div>
+            <h1>texto descriptivo</h1>
           </div>
         </div>
     </div>
