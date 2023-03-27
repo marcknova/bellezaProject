@@ -132,18 +132,89 @@ const Inicio = () => {
                     </div>
                   </div>
             </div> 
-              <div className='bg-[#e5b3fe] h-96 relative bottom-[23rem]'>    
+              <div className='bg-[#e5b3fe] h-[30rem] relative bottom-[23rem]'>    
               </div>
             </div>
         </div>
         <div id='fiveSection'>
-          <div>
-            <img src={IMG10} className='w-full h-full' />
-          </div>
-          <div>
-            <h1>texto descriptivo</h1>
+          <div className='flex h-full top-5 relative z-10'>
+            <div className='w-1/2 bg-fixed'>
+              <img src={IMG10} className='w-full h-full' />
+            </div>
+            <div className='w-1/2 m-auto'>
+              <div className='w-full h-full'>
+                <h1 className='mx-12 p-3'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, dolorum distinctio quae suscipit cupiditate beatae itaque aliquid, sint placeat, nulla aspernatur laborum libero quia fugiat id molestias excepturi labore officia.</h1>
+              </div>
+            </div>
           </div>
         </div>
+        <div id='sixSection'>
+          <div className='w-full h-auto bg-[#e5b3fe]'>
+            <div className='flex p-5 m-5'>
+              <div className='w-[40%] h-full m-auto text-center'>
+                <h1 className='font-bold text-xl'>Cuidados para la piel</h1>
+              </div>
+              <div className='w-[60%] h-full m-5 p-5'>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni tempore soluta modi vero beatae adipisci. Dolorem et officiis maiores veniam sapiente? Quam dolores amet blanditiis doloremque expedita. Porro, exercitationem pariatur.</p>
+                <p className='my-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni tempore soluta modi vero beatae adipisci. Dolorem et officiis maiores veniam sapiente? Quam dolores amet blanditiis doloremque expedita. Porro, exercitationem pariatur.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='sevenSection'>
+          <div>
+            <div>
+              <h1 className='text-center font-bold text-xl my-10'>Siguenos</h1>
+            </div>
+            <div className='flex'>
+              <div className='w-full h-[200px]'>
+                <img src={IMG1} className='w-full h-full' />
+              </div>
+              <div className='w-full h-[200px]'>
+                <img src={IMG5} className='w-full h-full'/>
+              </div>
+              <div className='w-full h-[200px]'>
+                <img src={IMG3} className='w-full h-full'/>
+              </div>
+              <div className='w-full h-[200px]'>
+                <img src={IMG8} className='w-full h-full'/>
+              </div>
+              <div className='w-full h-[200px]'>
+                <img src={IMG4} className='w-full h-full'/>
+              </div>
+              <div className='w-full h-[200px]'>
+                <img src={IMG2} className='w-full h-full'/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <div className='bg-[#e5b3fe] flex p-10'>
+              <div className='w-[20%]'>
+                <div className='mx-5'>
+                  <h1 className='mb-3'>Comprar</h1>
+                  <ul>
+                    <li>Productos Nuevos</li>
+                    <li>Mas Vendidos</li>
+                    <li>Labios</li>
+                    <li>Ojos</li>
+                  </ul>
+                </div>
+              </div>
+              <div className='w-[20%]'>
+                <h1 className='mb-3'>Tienda</h1>
+                <p>Ote 5 #964 Orizaba, Ver</p>
+              </div>
+              <div className='w-[25%]'>
+                <h1 className='mb-3'>Atencion Al Cliente</h1>
+                <h1 className='mb-1 font-bold'>Phone: <span className='font-normal'>2722085138</span></h1>
+                <h1 className='mb-1 font-bold'>Email: <span className='font-normal'>marck.noval@gmail.com</span></h1>
+              </div>
+              <div className='w-[35%]'>
+                <h1 className='font-extrabold text-end mt-[30%]'>Todos los derechos reservados</h1>
+              </div>
+          </div>
+        </footer>
     </div>
     </>
   )
