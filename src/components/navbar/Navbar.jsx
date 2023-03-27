@@ -9,7 +9,7 @@ const Navbar = () => {
                 <h1 className="text-2xl font-bold">Logo</h1>
               </Link>
             </div>
-            <ul className="list-none flex ">
+            <ul className="list-none md:flex absolute md:static -left-full">
               <li className="hover:bg-[#e0acfc] hover:font-semibold ease-in duration-100 cursor-pointer">
                 <div className="p-4">
                   <Link to="/bellezaProject/masnuevo">Lo mas nuevo</Link>
