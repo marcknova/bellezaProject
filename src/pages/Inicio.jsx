@@ -14,8 +14,8 @@ const Inicio = () => {
   return (
     <>
     <div className='bg-[#ff97d9]'>
-        <div className='w-full h-[400px] flex justify-end bg-[#e5b3fe]'>
-          <div>
+        <div className='h-[400px] flex justify-end bg-[#e5b3fe]'>
+          <div className='w-full'>
             <div className='absolute top-24 left-0 md:p-10 md:ml-[17%]'>
               <span>NUEVO LANZAMIENTO</span>
               <h1 className='font-bold md:text-4xl text-xl my-5'>Polvos mas brillosos</h1>
@@ -29,11 +29,11 @@ const Inicio = () => {
               </div>
             </div>
           </div>
-          <div className='w-[90%]'>
-            <img src={IMG0} className='h-full' />
+          <div className='w-full text-end'>
+            <img src={IMG0} className='w-full h-full' />
           </div>
         </div>
-        <div className='w-full h-full p-2 mb-10' id='masvendido'>
+        <div className='w-full h-full mb:p-2 mb-10' id='masvendido'>
           <div className='py-5 my-5'>
           <h2 className='text-center text-xl p-2'>Imprescindibles</h2>
           <h1 className='text-center font-bold text-4xl'>
@@ -41,7 +41,7 @@ const Inicio = () => {
             <span className='title font-normal'> Vendidos</span>
           </h1>
           </div>
-          <div className='flex flex-wrap md:p-2 md:m-3 m-1 justify-around '>
+          <div className='flex flex-wrap md:p-2 md:m-3 justify-around '>
             <div>
               <div className='w-[190px] h-[190px]'>
                 <img src={IMG1} className='w-full h-full p-5' />
@@ -122,30 +122,30 @@ const Inicio = () => {
           <div className='p-5 '>
             <h1 className='text-center font-bold text-2xl'>Descubre Mas</h1>
           </div>
-            <div className='h-[38rem] bg-[#ff97d9]'> 
-            <div className='h-[38rem] relative z-10'>
-                  <div className='flex md:flex-row flex-col justify-evenly'>
-                    <div className='md:w-[345px] md:h-[520px] w-[320px] h-[300px]'>
+            <div className='md:h-[38rem] bg-[#ff97d9]'> 
+            <div className='md:h-[38rem] md:relative z-10'>
+                  <div className='flex md:flex-row flex-col md:justify-evenly'>
+                    <div className='md:w-[345px] md:h-[520px] w-full h-[320px]'>
                       <img src={IMG8} className='w-full h-full' />
                     </div>
-                    <div className='md:w-[345px] md:h-[520px] w-[320px] h-[300px]'>
+                    <div className='md:w-[345px] md:h-[520px] w-full h-[320px]'>
                       <img src={IMG9} className='w-full h-full' />
                     </div>
-                    <div className='md:w-[345px] md:h-[520px] w-[320px] h-[300px]'>
+                    <div className='md:w-[345px] md:h-[520px] w-full h-[320px]'>
                       <img src={IMG8} className='w-full h-full' />
                     </div>
                   </div>
             </div> 
-              <div className='bg-[#e5b3fe] h-[30rem] relative bottom-[23rem]'>    
+              <div className='bg-[#e5b3fe] hidden md:block h-[30rem] md:relative bottom-[23rem]'>    
               </div>
             </div>
         </div>
         <div id='fiveSection'>
-          <div className='flex h-full top-5 relative z-10'>
-            <div className='w-1/2 bg-fixed'>
+          <div className='flex flex-col-reverse md:flex-row h-full top-5 md:relative z-10'>
+            <div className='md:w-1/2 bg-fixed'>
               <img src={IMG10} className='w-full h-full' />
             </div>
-            <div className='w-1/2 m-auto'>
+            <div className='md:w-1/2 m-auto'>
               <div className='w-full h-full'>
                 <h1 className='mx-12 p-3'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, dolorum distinctio quae suscipit cupiditate beatae itaque aliquid, sint placeat, nulla aspernatur laborum libero quia fugiat id molestias excepturi labore officia.</h1>
               </div>
@@ -154,11 +154,11 @@ const Inicio = () => {
         </div>
         <div id='sixSection'>
           <div className='w-full h-auto bg-[#e5b3fe]'>
-            <div className='flex p-5 m-5'>
-              <div className='w-[40%] h-full m-auto text-center'>
-                <h1 className='font-bold text-xl'>Cuidados para la piel</h1>
+            <div className='flex flex-col md:flex-row p-5 md:m-5'>
+              <div className='md:w-[40%] h-full m-auto text-center'>
+                <h1 className='font-bold text-xl md:mt-0 mt-5'>Cuidados para la piel</h1>
               </div>
-              <div className='w-[60%] h-full m-5 p-5'>
+              <div className='md:w-[60%] h-full m-5 p-5'>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni tempore soluta modi vero beatae adipisci. Dolorem et officiis maiores veniam sapiente? Quam dolores amet blanditiis doloremque expedita. Porro, exercitationem pariatur.</p>
                 <p className='my-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni tempore soluta modi vero beatae adipisci. Dolorem et officiis maiores veniam sapiente? Quam dolores amet blanditiis doloremque expedita. Porro, exercitationem pariatur.</p>
               </div>
@@ -170,7 +170,7 @@ const Inicio = () => {
             <div>
               <h1 className='text-center font-bold text-xl my-10'>Siguenos</h1>
             </div>
-            <div className='flex'>
+            <div className='flex flex-col md:flex-row'>
               <div className='w-full h-[200px]'>
                 <img src={IMG1} className='w-full h-full' />
               </div>
@@ -193,9 +193,9 @@ const Inicio = () => {
           </div>
         </div>
         <footer>
-          <div className='bg-[#e5b3fe] flex p-10'>
-              <div className='w-[20%]'>
-                <div className='mx-5'>
+          <div className='bg-[#e5b3fe] flex flex-col md:flex-row p-10'>
+              <div className='md:w-[20%]'>
+                <div className='md:mx-5'>
                   <h1 className='mb-3'>Comprar</h1>
                   <ul>
                     <li>Productos Nuevos</li>
@@ -205,16 +205,16 @@ const Inicio = () => {
                   </ul>
                 </div>
               </div>
-              <div className='w-[20%]'>
+              <div className='md:w-[20%]'>
                 <h1 className='mb-3'>Tienda</h1>
                 <p>Ote 5 #964 Orizaba, Ver</p>
               </div>
-              <div className='w-[25%]'>
+              <div className='md:w-[25%]'>
                 <h1 className='mb-3'>Atencion Al Cliente</h1>
                 <h1 className='mb-1 font-bold'>Phone: <span className='font-normal'>2722085138</span></h1>
                 <h1 className='mb-1 font-bold'>Email: <span className='font-normal'>marck.noval@gmail.com</span></h1>
               </div>
-              <div className='w-[35%]'>
+              <div className='md:w-[35%]'>
                 <h1 className='font-extrabold text-end mt-[30%]'>Todos los derechos reservados</h1>
               </div>
           </div>
