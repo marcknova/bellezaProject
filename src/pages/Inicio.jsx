@@ -46,9 +46,9 @@ const Inicio = () => {
               <div className='w-[190px] h-[190px]'>
                 <img src={IMG1} className='w-full h-full p-5' />
               </div>
-              <div >
-                <h2>Rimel de no se que</h2>
-                <span>$54.00</span>
+              <div>
+                <h2 className='mx-5'>Rimel de no se que</h2>
+                <span className='block text-center'>$54.00</span>
               </div>
             </div>
             <div>
@@ -56,8 +56,8 @@ const Inicio = () => {
                 <img src={IMG2} className='w-full h-full p-5' />
               </div>
               <div>
-                <h2>Rimel de no se que</h2>
-                <span>$54.00</span>
+                <h2 className='mx-5'>Rimel de no se que</h2>
+                <span className='block text-center'>$54.00</span>
               </div>
             </div>
             <div>
@@ -65,8 +65,8 @@ const Inicio = () => {
                 <img src={IMG3} className='w-full h-full p-5' />
               </div>
               <div>
-                <h2>Rimel de no se que</h2>
-                <span>$54.00</span>
+                <h2 className='mx-5'>Rimel de no se que</h2>
+                <span className='block text-center'>$54.00</span>
               </div>
             </div>
             <div>
@@ -74,8 +74,8 @@ const Inicio = () => {
                 <img src={IMG4} className='w-full h-full p-5' />
               </div>
               <div>
-                <h2>Rimel de no se que</h2>
-                <span>$54.00</span>
+                <h2 className='mx-5'>Rimel de no se que</h2>
+                <span className='block text-center'>$54.00</span>
               </div>
             </div>
             <div>
@@ -83,8 +83,8 @@ const Inicio = () => {
                 <img src={IMG5} className='w-full h-full p-5' />
               </div>
               <div>
-                <h2>Rimel de no se que</h2>
-                <span>$54.00</span>
+                <h2 className='mx-5'>Rimel de no se que</h2>
+                <span className='block text-center'>$54.00</span>
               </div>
             </div>
             <div>
@@ -92,23 +92,24 @@ const Inicio = () => {
                 <img src={IMG6} className='w-full h-full p-5' />
               </div>
               <div>
-                <h2>Rimel de no se que</h2>
-                <span>$54.00</span>
+                <h2 className='mx-5'>Rimel de no se que</h2>
+                <span className='block text-center'>$54.00</span>
               </div>
             </div>
 
           </div>
           <div className='text-center md:my-5 my-8'>
-            <button className='border-black border-[1px] w-56 h-10'>Comprar mas vendidos</button>
+            <button className='border-black hover:bg-black hover:text-[#ff97d9] border-[1px] w-56 h-10'>Comprar mas vendidos</button>
           </div>
         </div>  
         <div id='thirdSection'>
           <div className='flex md:flex-row flex-col mb-5 h-full md:h-[30rem]'>
             <div className='bg-[#e5b3fe] md:w-[50%] h-full'>
-              <div className='p-6 m-auto'>
-                <h1 className='font-extrabold text-2xl my-4 ml-10'>Labios mas brillosos</h1>
-                <p className='mx-10'> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-              <button className='my-5 ml-10'>Comprar Labiales</button>
+              <div className='p-6 md:my-0 my-6 m-auto'>
+                <span className='md:ml-10'>SUPER SEXY</span>
+                <h1 className='font-extrabold text-4xl my-4 md:ml-10'>Los labios mas vibrantes</h1>
+                <p className='md:mx-10 md:my-0 my-8'> Párrafo. Haz clic aquí para agregar tu propio texto y editar. Aquí puedes contar tu historia y permitir que tus usuarios sepan más sobre ti.</p>
+              <button className='bg-black text-[#e5b3fe] hover:bg-[#e5b3fe] font-semibold hover:text-black my-5 md:ml-10 w-48 h-9 border-[1px] border-black'>Comprar Labiales</button>
               </div>
             </div>
             <div className='md:absolute right-20 md:w-[50%] min-h-[50%]'>
