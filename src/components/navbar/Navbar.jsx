@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom"
+import MenuHamburger from "../menuHamburger/MenuHamburger"
 
 const Navbar = () => {
   return (
     <div className="bg-[#ff97d9]">
         <nav className="flex justify-between mx-2">
+          <MenuHamburger />
             <div className="p-1 m-2">
               <Link to="/bellezaProject/">
                 <h1 className="text-2xl font-bold">Logo</h1>

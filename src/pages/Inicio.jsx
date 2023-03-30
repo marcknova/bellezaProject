@@ -104,10 +104,10 @@ const Inicio = () => {
         </div>  
         <div id='thirdSection'>
           <div className='flex md:flex-row flex-col mb-5 h-full md:h-[30rem]'>
-            <div className='bg-[#e5b3fe] md:w-[50%] h-full'>
+            <div className='bg-[#e5b3fe] md:w-[50%] h-full md:p-7'>
               <div className='p-6 md:my-0 my-6 m-auto'>
                 <span className='md:ml-10'>SUPER SEXY</span>
-                <h1 className='font-extrabold text-4xl my-4 md:ml-10'>Los labios mas vibrantes</h1>
+                <h1 className='font-extrabold md:text-2xl text-4xl my-4 md:ml-10'>Los labios mas vibrantes</h1>
                 <p className='md:mx-10 md:my-0 my-8'> Párrafo. Haz clic aquí para agregar tu propio texto y editar. Aquí puedes contar tu historia y permitir que tus usuarios sepan más sobre ti.</p>
               <button className='bg-black text-[#e5b3fe] hover:bg-[#e5b3fe] font-semibold hover:text-black my-5 md:ml-10 w-48 h-9 border-[1px] border-black'>Comprar Labiales</button>
               </div>
@@ -196,7 +196,7 @@ const Inicio = () => {
         <footer>
           <div className='bg-[#e5b3fe] flex flex-col md:flex-row p-10'>
               <div className='md:w-[20%]'>
-                <div className='md:mx-5'>
+                <div className='md:mx-5 md:mb-0 mb-5'>
                   <h1 className='mb-3'>Comprar</h1>
                   <ul>
                     <li>Productos Nuevos</li>
@@ -206,7 +206,7 @@ const Inicio = () => {
                   </ul>
                 </div>
               </div>
-              <div className='md:w-[20%]'>
+              <div className='md:w-[20%] md:mb-0 mb-2'>
                 <h1 className='mb-3'>Tienda</h1>
                 <p>Ote 5 #964 Orizaba, Ver</p>
               </div>
