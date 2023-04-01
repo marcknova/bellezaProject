@@ -9,9 +9,8 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    position: fixed;
     top: 0; 
-    margin: 1em 0 0.8em 0.5em;
+    margin: 0.8em 0 0.8em 0.5em;
   }
   
   .button-menu span {

@@ -2,10 +2,11 @@ import { useState } from "react";
 import "./menuHamburger.css";
 
 const MenuHamburger = () => {
+
   const [hamburger, setHamburger] = useState(true);
   return (
     <>
-      <div className="md:hidden block">
+      <div className="md:hidden absolute left-[82%]">
         <button
           type="button"
           title="hamburger"

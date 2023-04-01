@@ -4,13 +4,14 @@ import MenuHamburger from "../menuHamburger/MenuHamburger"
 const Navbar = () => {
   return (
     <div className="bg-[#ff97d9]">
-        <nav className="flex justify-between mx-2">
+        <nav className="flex justify-between md:mx-2 md:flex-nowrap flex-wrap-reverse">
           <MenuHamburger />
             <div className="p-1 m-2">
               <Link to="/bellezaProject/">
                 <h1 className="text-2xl font-bold">Logo</h1>
               </Link>
             </div>
+            <div>
             <ul className="list-none md:flex absolute md:static -left-full">
               <li className="hover:bg-[#e0acfc] hover:font-semibold ease-in duration-100 cursor-pointer">
                 <div className="p-4">
@@ -42,10 +43,15 @@ const Navbar = () => {
                   <Link to="/bellezaProject/ojos">Ojos</Link>
                 </div>
               </li>
+              <li>
+                <div className="">
+                  <span className="mx-5"><i className="fa-solid fa-user"></i></span>
+                </div>
+              </li>
             </ul>
-            <div className="p-2 m-2">
-                <span className="mx-5"><i className="fa-solid fa-user"></i></span>
-                <span><i className="fa-solid fa-cart-shopping"></i></span>
+            </div>
+            <div className="md:p-2 md:m-2 md:basis-0 basis-full md:bg-[#ff97d9] bg-black">
+                <span><i className="fa-solid fa-cart-shopping text-white md:text-black"></i></span>
             </div>
         </nav>
     </div>
