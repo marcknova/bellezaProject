@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <>
         <footer>
-          <div className='bg-[#e5b3fe] flex flex-col md:flex-row p-10'>
+          <div className='bg-black text-white flex flex-col md:flex-row p-10'>
               <div className='md:w-[20%]'>
                 <div className='md:mx-5 md:mb-0 mb-5'>
                   <h1 className='mb-3'>Comprar</h1>

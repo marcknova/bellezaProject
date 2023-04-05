@@ -1,5 +1,6 @@
 .button-menu {
-    z-index: 200;
+    position: absolute;
+    z-index: 300;
     width: 40px;
     height: 40px;
     border: none;
@@ -9,8 +10,8 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    top: 0; 
     margin: 0.8em 0 0.8em 0.5em;
+    top: -3.7rem;
   }
   
   .button-menu span {
@@ -27,7 +28,7 @@
   .button-menu.close span {
     opacity: 1;
     transform: rotate(45deg) translate(0px, 0px);
-    background: #000000;
+    background: #FFFFFF;
   }
   
   .button-menu.close span:nth-child(2) {
@@ -41,7 +42,7 @@
   .button-menu.close span {
     opacity: 1;
     transform: rotate(45deg) translate(0px, 0px);
-    background: #000000;
+    background: #FFFFFF;
   }
   
   .button-menu.close span:nth-child(2) {

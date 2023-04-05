@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useContext } from "react";
 import "./menuHamburger.css";
+import { HamburgerContext } from "../../context/UseHamburger";
 
 const MenuHamburger = () => {
 
-  const [hamburger, setHamburger] = useState(true);
+  const { hamburger, setHamburger } = useContext(HamburgerContext);
   return (
     <>
       <div className="md:hidden absolute left-[82%]">
@@ -11,7 +12,7 @@ const MenuHamburger = () => {
           type="button"
           title="hamburger"
           id="button-menu"
-          className={hamburger ? "button-menu" : "button-menu close"}
+          className={hamburger ? "button-menu close" : "button-menu" }
           onClick={() => setHamburger(!hamburger)}
         >
           <span></span>
