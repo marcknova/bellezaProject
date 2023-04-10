@@ -8,8 +8,7 @@ import IMG6 from '../assets/6.jpg';
 import IMG7 from '../assets/7.jpg';
 import IMG8 from '../assets/8.jpg';
 import IMG9 from '../assets/9.jpg';
-import IMG10 from '../assets/10.jpg';
-import { Footer } from '../components/footer/Footer';
+import IMG10 from '../assets/10.jpg'
 
 const Inicio = () => {
   return (
@@ -194,7 +193,6 @@ const Inicio = () => {
             </div>
           </div>
         </div>
-        <Footer />
     </div>
     </>
   )

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Footer } from '../components/footer/Footer'
 import img from '../assets/3ina-sombra-de-ojos-en-crema-maquillaje-removebg-preview.jpg'
 
 const LomasNuevo = () => {
@@ -15,42 +14,42 @@ const LomasNuevo = () => {
     </div>
       <div className='bg-[#e5b3fe] p-2 md:p-5'>
         <div className='flex flex-row p-3 flex-wrap justify-center m-3'>
-          <div className='w-[160px] md:basis-[25%] p-2 mx-1 md:mx-8 my-6'>
+          <div className='w-[145px] md:basis-[25%] p-2 md:mx-8 my-6'>
             <img src={img} />
             <div className='my-3 p-2 text-center'>
               <h2>Sombras de ojos cobrizo</h2>
               <span className='text-gray-600'>$120.00</span>
             </div>
           </div>
-          <div className='w-[160px] md:basis-[25%] p-2 mx-1 md:mx-8 my-6'>
+          <div className='w-[145px] md:basis-[25%] p-2 md:mx-8 my-6'>
             <img src={img} />
             <div className='my-3 p-2 text-center'>
               <h2>Sombras de ojos cobrizo</h2>
               <span className='text-gray-600'>$120.00</span>
             </div>
           </div>
-          <div className='w-[160px] md:basis-[25%] p-2 mx-1 md:mx-8 my-6'>
+          <div className='w-[145px] md:basis-[25%] p-2 md:mx-8 my-6'>
             <img src={img} />
             <div className='my-3 p-2 text-center'>
               <h2>Sombras de ojos cobrizo</h2>
               <span className='text-gray-600'>$120.00</span>
             </div>
           </div>
-          <div className='w-[160px] md:basis-[25%] p-2 mx-1 md:mx-8'>
+          <div className='w-[145px] md:basis-[25%] p-2 md:mx-8'>
             <img src={img} />
             <div className='my-3 p-2 text-center'>
               <h2>Sombras de ojos cobrizo</h2>
               <span className='text-gray-600'>$120.00</span>
             </div>
           </div>
-          <div className='w-[160px] md:basis-[25%] p-2 mx-1 md:mx-8'>
+          <div className='w-[145px] md:basis-[25%] p-2 md:mx-8'>
             <img src={img} />
             <div className='my-3 p-2 text-center'>
               <h2>Sombras de ojos cobrizo</h2>
               <span className='text-gray-600'>$120.00</span>
             </div>
           </div>
-          <div className='w-[160px] md:basis-[25%] p-2 mx-1 md:mx-8'>
+          <div className='w-[145px] md:basis-[25%] p-2 md:mx-8'>
             <img src={img} />
             <div className='my-3 p-2 text-center'>
               <h2>Sombras de ojos cobrizo</h2>
@@ -59,7 +58,6 @@ const LomasNuevo = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   )
 }

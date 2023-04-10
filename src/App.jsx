@@ -8,6 +8,8 @@ import Cara from './pages/Cara'
 import Labios from './pages/Labios'
 import Ojos from './pages/Ojos'
 import Navbar from './components/navbar/Navbar'
+import Carrito from './pages/Carrito'
+import { Footer } from './components/footer/Footer'
 
 // colors
 // ff97d9
@@ -25,7 +27,9 @@ function App() {
             <Route path='/bellezaProject/cara' element={ <Cara /> } />
             <Route path='/bellezaProject/labios' element={ <Labios /> } />
             <Route path='/bellezaProject/ojos' element={ <Ojos /> } />
+            <Route path='/bellezaProject/view/carrito' element={ <Carrito /> } />
           </Routes>
+  <Footer />
     </>
   )
 }
