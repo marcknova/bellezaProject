@@ -1,42 +1,58 @@
 import React from 'react'
-import IMG from '../assets/6.jpg'
+import IMG from '../assets/8.jpg'
 
 const Carrito = () => {
   return (
-    <>
-        <div className='bg-[#e5b3fe] flex'>
-            <div className=''>
-                <div className='img m-auto border-[1px] border-zinc-500 mr-0 mt-[4.8rem] mb-5 w-[550px] h-[500px]'>
-                    <img src={IMG} className='w-full h-full'/>
+    <div>
+        <div className='flex flex-col md:flex-row mx-[12rem] my-14'>
+            <div className='w-[650px] mr-8'>
+                <div className='my-8 border-b-[1px] border-b-[#706a6a]'>
+                    <h1 className='my-3'>Mi Carrito</h1>
                 </div>
-                <div className=''>
-                <h1 className=''>Descripción del producto. Describe tu producto de forma clara y precisa. Usa palabras únicas.</h1> 
+                <div className='flex flex-wrap pb-8 border-b-[1px] border-b-[#706a6a]'>
+                    <div className='w-[150px] h-[130px] border-[1px] border-black'>
+                        <img src={IMG} className='w-full h-full' />
+                    </div>
+                    <div className='mx-7'>
+                        <h1 className='mb-4'>Base en polvo Moroccan</h1>
+                        <span>$120.00</span>
+                    </div>
+                    <div>
+                        <input type='number' className='border-[2px] border-black w-20 mx-[2.2rem]' />
+                        <label>$120.00</label>
+                    </div>
+                    <div>
+                        <p className='ml-3'>X</p>
+                    </div>
+                </div>
+                <div className='my-8'>
+                    <h1 className='mb-5'>Ingresar codigo promocional</h1>
+                    <h1>Agregar Nota</h1>
                 </div>
             </div>
-            <div >
-                <div className='my-20 m-6'>
+            <div className='w-[250px]'>
+                <div className='my-8 border-b-[1px] border-b-[#706a6a]'>
+                    <h1 className='my-3'>Resumen del pedido</h1>
+                </div>
+                <div className=''>
                     <div>
-                        <h1 className='text-xl mb-2'>Titulo del producto</h1>
-                        <p className='text-sm mb-5'>SKU:00455</p>
-                        <span>$120.00</span>
-                        <div className='my-5 flex flex-col'>
-                            <h1 className='text-sm'>Cantidad</h1>
-                            <input type='number' className='block w-20 h-8' />
-                        </div>
-                        <div className='flex flex-col text-[#ffffff]'>
-                            <button className='bg-[#ff97d9] w-[300px] h-11 my-2'>Agregar al Carrito</button>
-                            <button className='bg-black w-[350px] h-11 my-2'>Realizar Compra</button>
-                        </div>
-                        <div>
-                            <div>Informacion del producto</div>
-                            <div>Politicas de devolucion</div>
-                            <div>Informacion de envio</div>
-                        </div>
+                       <span className='text-base mr-10'>Subtotal</span>
+                       <span>$120.00</span>
                     </div>
+                    <div className='border-b-[1px] border-b-[#706a6a]'>
+                        <h1 className='my-2'>Calcular Envio</h1>
+                    </div>
+                    <div>
+                        <h1 className='my-5'>Total</h1>
+                    </div>
+                </div>
+                <div>
+                    <button className='bg-black w-full h-12 text-white'>Finalizar Compra</button>
+                    <h1 className='my-2 text-center'>Pago seguro</h1>
                 </div>
             </div>
         </div>
-    </>
+    </div>
   )
 }
 
