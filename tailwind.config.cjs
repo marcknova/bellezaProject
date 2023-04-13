@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         moresale: "url('./src/assets/masvendido.jpg')",
+        belleza: "url('./src/assets/10.jpg')",
       },
     },
   },

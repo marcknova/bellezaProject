@@ -9,6 +9,7 @@ import IMG7 from '../assets/7.jpg';
 import IMG8 from '../assets/8.jpg';
 import IMG9 from '../assets/9.jpg';
 import IMG10 from '../assets/10.jpg'
+import { Link } from 'react-router-dom';
 
 const Inicio = () => {
   return (
@@ -43,6 +44,7 @@ const Inicio = () => {
           </div>
           <div className='flex flex-wrap md:p-2 md:m-3 justify-around '>
             <div>
+              <Link to={'/bellezaProject/view/description'}>
               <div className='w-[190px] h-[190px]'>
                 <img src={IMG1} className='w-full h-full p-5' />
               </div>
@@ -50,8 +52,10 @@ const Inicio = () => {
                 <h2 className='mx-5'>Rimel de no se que</h2>
                 <span className='block text-center'>$54.00</span>
               </div>
+              </Link>
             </div>
             <div>
+              <Link to={'/bellezaProject/view/description'}>
               <div className='w-[190px] h-[190px]'>
                 <img src={IMG2} className='w-full h-full p-5' />
               </div>
@@ -59,8 +63,10 @@ const Inicio = () => {
                 <h2 className='mx-5'>Rimel de no se que</h2>
                 <span className='block text-center'>$54.00</span>
               </div>
+              </Link>
             </div>
             <div>
+              <Link to={'/bellezaProject/view/description'}>
               <div className='w-[190px] h-[190px]'>
                 <img src={IMG3} className='w-full h-full p-5' />
               </div>
@@ -68,8 +74,10 @@ const Inicio = () => {
                 <h2 className='mx-5'>Rimel de no se que</h2>
                 <span className='block text-center'>$54.00</span>
               </div>
+              </Link>
             </div>
             <div>
+              <Link to={'/bellezaProject/view/description'}>
               <div className='w-[190px] h-[190px]'>
                 <img src={IMG4} className='w-full h-full p-5' />
               </div>
@@ -77,8 +85,10 @@ const Inicio = () => {
                 <h2 className='mx-5'>Rimel de no se que</h2>
                 <span className='block text-center'>$54.00</span>
               </div>
+              </Link>
             </div>
             <div>
+              <Link to={'/bellezaProject/view/description'}>
               <div className='w-[190px] h-[190px]'>
                 <img src={IMG5} className='w-full h-full p-5' />
               </div>
@@ -86,8 +96,10 @@ const Inicio = () => {
                 <h2 className='mx-5'>Rimel de no se que</h2>
                 <span className='block text-center'>$54.00</span>
               </div>
+              </Link>
             </div>
             <div>
+              <Link to={'/bellezaProject/view/description'}>
               <div className='w-[190px] h-[190px]'>
                 <img src={IMG6} className='w-full h-full p-5' />
               </div>
@@ -95,11 +107,13 @@ const Inicio = () => {
                 <h2 className='mx-5'>Rimel de no se que</h2>
                 <span className='block text-center'>$54.00</span>
               </div>
+              </Link>
             </div>
-
           </div>
           <div className='text-center md:my-5 my-8'>
-            <button className='border-black hover:bg-black hover:text-[#ff97d9] border-[1px] w-56 h-10'>Comprar mas vendidos</button>
+            <Link to={"/bellezaProject/masvendido"}>
+              <button className='border-black hover:bg-black hover:text-[#ff97d9] border-[1px] w-56 h-10'>Comprar mas vendidos</button>
+            </Link>
           </div>
         </div>  
         <div id='thirdSection'>
@@ -109,7 +123,9 @@ const Inicio = () => {
                 <span className='md:ml-10'>SUPER SEXY</span>
                 <h1 className='font-extrabold md:text-2xl text-4xl my-4 md:ml-10'>Los labios mas vibrantes</h1>
                 <p className='md:mx-10 md:my-0 my-8'> Párrafo. Haz clic aquí para agregar tu propio texto y editar. Aquí puedes contar tu historia y permitir que tus usuarios sepan más sobre ti.</p>
-              <button className='bg-black text-[#e5b3fe] hover:bg-[#e5b3fe] font-semibold hover:text-black my-5 md:ml-10 w-48 h-9 border-[1px] border-black'>Comprar Labiales</button>
+                <Link to={'/bellezaProject/labios'}>
+                  <button className='bg-black text-[#e5b3fe] hover:bg-[#e5b3fe] font-semibold hover:text-black my-5 md:ml-10 w-48 h-9 border-[1px] border-black'>Comprar Labiales</button>
+                </Link>
               </div>
             </div>
             <div className='md:absolute right-20 md:w-[50%] min-h-[50%]'>
@@ -143,12 +159,13 @@ const Inicio = () => {
         </div>
         <div id='fiveSection'>
           <div className='flex flex-col-reverse md:flex-row h-full top-5 md:relative z-10'>
-            <div className='md:w-1/2 bg-fixed'>
-              <img src={IMG10} className='w-full h-full' />
+            <div className='md:w-1/2 h-[500px] bg-belleza bg-no-repeat bg-fixed'>
+              {/* <img src={IMG10} className='w-full h-full' /> */}
             </div>
-            <div className='md:w-1/2 m-auto'>
-              <div className='w-full h-full'>
-                <h1 className='mx-12 p-3'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, dolorum distinctio quae suscipit cupiditate beatae itaque aliquid, sint placeat, nulla aspernatur laborum libero quia fugiat id molestias excepturi labore officia.</h1>
+            <div className='md:w-1/2 mt-20'>
+              <div>
+                <h1 className='mx-12 p-3'>SOLO ESTE FIN DE SEMANA</h1>
+                <h1></h1>
               </div>
             </div>
           </div>

@@ -57,7 +57,7 @@ const Navbar = () => {
               </li>
             </ul>
             </div>
-            <div className="md:p-2 md:m-2 md:basis-0 basis-full md:bg-[#ff97d9] bg-black">
+            <div className="md:p-2 md:m-2 md:basis-0 basis-full md:bg-[#ff97d9] bg-black md:text-center text-right p-2 text-xl">
                 <Link to='/bellezaProject/view/carrito'>
                   <i className="fa-solid fa-cart-shopping text-white md:text-black"></i>
                 </Link>
