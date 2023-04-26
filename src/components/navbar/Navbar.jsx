@@ -5,8 +5,8 @@ import { HamburgerContext } from "../../context/UseHamburger"
 
 const Navbar = () => {
   const { hamburger } = useContext(HamburgerContext)
-  var posicionVentana = document.getElementById("menu");
-  console.log(posicionVentana);
+  // var posicionVentana = document.getElementById("menu");
+  // console.log(posicionVentana);
   return (
     <div className="bg-[#ff97d9]">
         <nav className="flex justify-between md:mx-2 flex-wrap-reverse">

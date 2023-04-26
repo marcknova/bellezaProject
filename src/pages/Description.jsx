@@ -1,13 +1,17 @@
 import React from 'react'
-import IMG from '../assets/6.jpg'
+import { useLocation } from 'react-router-dom'
 
 const Description = () => {
+    
+    const location = useLocation();
+    const {img, name, prize} = location.state
+
   return (
     <>
         <div className='bg-[#e5b3fe] flex md:flex-row flex-col'>
             <div>
                 <div className='img m-auto border-[1px] border-zinc-500 mr-0 mt-[4.8rem] mb-5 w-full md:w-[550px] h-[350px] md:h-[500px]'>
-                    <img src={IMG} className='w-full h-full'/>
+                    <img src={img} className='w-full h-full'/>
                 </div>
                 <div>
                 <p className='md:my-10'>Descripción del producto. Describe tu producto de forma clara y precisa. Usa palabras únicas.</p> 
@@ -17,13 +21,13 @@ const Description = () => {
                 <div className='md:my-20 m-5 md:m-6'>
                     <div className='flex flex-col'>
                         <div className='order-2 md:order-none'>
-                            <h1 className='text-xl mb-2'>Titulo del producto</h1>
+                            <h1 className='text-xl mb-2'>{name}</h1>
                         </div>
                         <div className='order-1 md:order-none'>
                             <p className='text-sm md:mb-5'>SKU:00455</p>
                         </div>
                         <div className='order-3 md:order-none'>
-                            <span>$120.00</span>
+                            <span>{prize}</span>
                         </div>
                         <div className='my-5 flex flex-col order-4 md:order-none'>
                             <h1 className='text-sm'>Cantidad</h1>

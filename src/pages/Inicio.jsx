@@ -4,12 +4,12 @@ import IMG2 from '../assets/2.jpg';
 import IMG3 from '../assets/3.jpg';
 import IMG4 from '../assets/4.jpg';
 import IMG5 from '../assets/5.jpg';
-import IMG6 from '../assets/6.jpg';
 import IMG7 from '../assets/7.jpg';
 import IMG8 from '../assets/8.jpg';
 import IMG9 from '../assets/9.jpg';
-import IMG10 from '../assets/10.jpg'
 import { Link } from 'react-router-dom';
+import { Images } from '../ImageObject/Images';
+import Card from '../components/imageCard/Card';
 
 const Inicio = () => {
   return (
@@ -43,74 +43,15 @@ const Inicio = () => {
           </h1>
           </div>
           <div className='flex flex-wrap md:p-2 md:m-3 justify-around '>
-            <div>
-              <Link to={'/bellezaProject/view/description'}>
-              <div className='w-[190px] h-[190px]'>
-                <img src={IMG1} className='w-full h-full p-5' />
-              </div>
-              <div>
-                <h2 className='mx-5'>Rimel de no se que</h2>
-                <span className='block text-center'>$54.00</span>
-              </div>
-              </Link>
+            {
+              Images.map((data) => 
+            <div key={data.id}>
+                    <Card children={data} />
             </div>
-            <div>
-              <Link to={'/bellezaProject/view/description'}>
-              <div className='w-[190px] h-[190px]'>
-                <img src={IMG2} className='w-full h-full p-5' />
-              </div>
-              <div>
-                <h2 className='mx-5'>Rimel de no se que</h2>
-                <span className='block text-center'>$54.00</span>
-              </div>
-              </Link>
-            </div>
-            <div>
-              <Link to={'/bellezaProject/view/description'}>
-              <div className='w-[190px] h-[190px]'>
-                <img src={IMG3} className='w-full h-full p-5' />
-              </div>
-              <div>
-                <h2 className='mx-5'>Rimel de no se que</h2>
-                <span className='block text-center'>$54.00</span>
-              </div>
-              </Link>
-            </div>
-            <div>
-              <Link to={'/bellezaProject/view/description'}>
-              <div className='w-[190px] h-[190px]'>
-                <img src={IMG4} className='w-full h-full p-5' />
-              </div>
-              <div>
-                <h2 className='mx-5'>Rimel de no se que</h2>
-                <span className='block text-center'>$54.00</span>
-              </div>
-              </Link>
-            </div>
-            <div>
-              <Link to={'/bellezaProject/view/description'}>
-              <div className='w-[190px] h-[190px]'>
-                <img src={IMG5} className='w-full h-full p-5' />
-              </div>
-              <div>
-                <h2 className='mx-5'>Rimel de no se que</h2>
-                <span className='block text-center'>$54.00</span>
-              </div>
-              </Link>
-            </div>
-            <div>
-              <Link to={'/bellezaProject/view/description'}>
-              <div className='w-[190px] h-[190px]'>
-                <img src={IMG6} className='w-full h-full p-5' />
-              </div>
-              <div>
-                <h2 className='mx-5'>Rimel de no se que</h2>
-                <span className='block text-center'>$54.00</span>
-              </div>
-              </Link>
-            </div>
+                )
+              }
           </div>
-          <div className='text-center md:my-5 my-8'>
+          <div className='text-center md:m  y-5 my-8'>
             <Link to={"/bellezaProject/masvendido"}>
               <button className='border-black hover:bg-black hover:text-[#ff97d9] border-[1px] w-56 h-10'>Comprar mas vendidos</button>
             </Link>
