@@ -4,6 +4,7 @@ const Card = ({ children }) => {
   
   const { 
     img, 
+    imgHover,
     nombre, 
     precio 
   } = children

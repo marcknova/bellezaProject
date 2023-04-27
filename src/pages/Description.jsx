@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useLocation } from 'react-router-dom'
+import { HamburgerContext } from '../context/UseHamburger';
 
 const Description = () => {
     
+    const { addToCart } = useContext(HamburgerContext)
     const location = useLocation();
     const {img, name, prize} = location.state
 
@@ -34,7 +36,7 @@ const Description = () => {
                             <input type='number' className='block w-20 h-8' />
                         </div>
                         <div className='flex flex-col text-[#ffffff] order-5 md:order-none'>
-                            <button className='bg-[#ff97d9] md:w-[300px] h-11 my-2'>Agregar al Carrito</button>
+                            <button onClick={() => addToCart('New item')} className='bg-[#ff97d9] md:w-[300px] h-11 my-2'>Agregar al Carrito</button>
                             <button className='bg-black md:w-[350px] h-11 my-2'>Realizar Compra</button>
                         </div>
                         <div className='order-6 md:order-none'>

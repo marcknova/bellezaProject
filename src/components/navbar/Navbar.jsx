@@ -4,9 +4,9 @@ import { useContext } from "react"
 import { HamburgerContext } from "../../context/UseHamburger"
 
 const Navbar = () => {
-  const { hamburger } = useContext(HamburgerContext)
-  // var posicionVentana = document.getElementById("menu");
-  // console.log(posicionVentana);
+  
+  const { hamburger, cartSize } = useContext(HamburgerContext)
+
   return (
     <div className="bg-[#ff97d9]">
         <nav className="flex justify-between md:mx-2 flex-wrap-reverse">
@@ -59,7 +59,10 @@ const Navbar = () => {
             </div>
             <div className="md:p-2 md:m-2 md:basis-0 basis-full md:bg-[#ff97d9] bg-black md:text-center text-right p-2 text-xl">
                 <Link to='/bellezaProject/view/carrito'>
-                  <i className="fa-solid fa-cart-shopping text-white md:text-black"></i>
+                  {/* <i className="fa-solid fa-cart-shopping text-white md:text-black"></i> */}
+                  <i className="far fa-sharp fa-light fa-bag-shopping">
+                  </i>
+                    {cartSize}
                 </Link>
             </div>
         </nav>
