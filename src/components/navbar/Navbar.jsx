@@ -49,9 +49,9 @@ const Navbar = () => {
                 </div>
               </li>
               <li>
-                <div className="md:p-0 p-5 text-center md:text-left md:absolute md:right-10 md:top-4">
+                <div className="md:p-0 p-5 text-center md:text-left md:absolute md:right-10 md:top-[1.15rem]">
                   <span className="mx-5"><i className="fa-solid fa-user"></i>
-                    <h1 className="md:inline-block mx-3">Entrar</h1>
+                    <h1 className="md:inline-block mx-2">Entrar</h1>
                   </span>
                 </div>
               </li>
@@ -59,10 +59,12 @@ const Navbar = () => {
             </div>
             <div className="md:p-2 md:m-2 md:basis-0 basis-full md:bg-[#ff97d9] bg-black md:text-center text-right p-2 text-xl">
                 <Link to='/bellezaProject/view/carrito'>
-                  {/* <i className="fa-solid fa-cart-shopping text-white md:text-black"></i> */}
-                  <i className="far fa-sharp fa-light fa-bag-shopping">
+                  <i className="fa-solid fa-cart-shopping text-white md:text-black">
+                    {
+                      cartSize !== 0 ? <span className="text-sm absolute right-3 top-6">{cartSize}</span> : null
+                    }  
                   </i>
-                    {cartSize}
+                  {/* <i class="fa-thin fa-cart-shopping"></i> */}
                 </Link>
             </div>
         </nav>

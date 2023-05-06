@@ -5,18 +5,19 @@ const Card = ({ children }) => {
   const { 
     img, 
     imgHover,
+    value,
     nombre, 
     precio 
   } = children
 
   const navigate = useNavigate();
-
   const toDescription = () => {
     navigate('/bellezaProject/view/description', { 
       state: { 
         img: img,
         name: nombre,
-        prize: precio
+        prize: precio,
+        value: value
       }
     },
     );

@@ -1,9 +1,15 @@
 * {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 .title {
-    font-family: 'Brygada 1918', serif;
+  font-family: "Brygada 1918", serif;
+}
+
+selector::after {
+  content: "\f07a";
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 100;
 }

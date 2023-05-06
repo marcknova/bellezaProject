@@ -1,13 +1,15 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 import { HamburgerContext } from '../context/UseHamburger';
 
 const Description = () => {
     
-    const { addToCart } = useContext(HamburgerContext)
-    const location = useLocation();
-    const {img, name, prize} = location.state
+    const { addToCart } = useContext(HamburgerContext);
 
+    const location = useLocation();
+    const {img, name, prize, value} = location.state
+
+    const inputRef = useRef(null);
   return (
     <>
         <div className='bg-[#e5b3fe] flex md:flex-row flex-col'>
@@ -33,10 +35,23 @@ const Description = () => {
                         </div>
                         <div className='my-5 flex flex-col order-4 md:order-none'>
                             <h1 className='text-sm'>Cantidad</h1>
-                            <input type='number' className='block w-20 h-8' />
+                            <input type='number' className='block w-20 h-8' ref={inputRef} />
                         </div>
                         <div className='flex flex-col text-[#ffffff] order-5 md:order-none'>
-                            <button onClick={() => addToCart('New item')} className='bg-[#ff97d9] md:w-[300px] h-11 my-2'>Agregar al Carrito</button>
+                            <button 
+                            onClick={() => addToCart(
+                                {
+                                    name: name,
+                                    price: prize,
+                                    img: img,
+                                    value: value,
+                                    code: 'SKU:00455',
+                                    quantity: parseInt(inputRef.current.value)
+                                }
+                            )} 
+                            className='bg-[#ff97d9] md:w-[300px] h-11 my-2'>
+                                Agregar al Carrito
+                            </button>
                             <button className='bg-black md:w-[350px] h-11 my-2'>Realizar Compra</button>
                         </div>
                         <div className='order-6 md:order-none'>
