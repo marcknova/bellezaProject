@@ -1,13 +1,17 @@
-import React, { useContext, useRef } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 import { HamburgerContext } from '../context/UseHamburger';
 
 const Description = () => {
     
+    useEffect(() => {
+        window.scroll(0,0);
+    }, []);
+
     const { addToCart } = useContext(HamburgerContext);
 
     const location = useLocation();
-    const {img, name, prize, value} = location.state
+    const {id, img, name, prize, value} = location.state
 
     const inputRef = useRef(null);
   return (
@@ -41,6 +45,7 @@ const Description = () => {
                             <button 
                             onClick={() => addToCart(
                                 {
+                                    id: id,
                                     name: name,
                                     price: prize,
                                     img: img,

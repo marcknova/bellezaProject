@@ -5,11 +5,16 @@ import { HamburgerContext } from '../context/UseHamburger'
 const Carrito = () => {
 
     const { cartItems, cartTotal } = useContext(HamburgerContext);
+
+    const calculateProductTotal = (item) => {
+        return item.quantity * item.value;
+    }
+
   return (
     <div>
         <div className='flex flex-col md:flex-row md:mx-[12rem] mt-5 md:my-14'>
             <div className='md:w-[650px] mr-8'>
-                <div className='my-8 border-b-[1px] border-b-[#b8afaf   ]'>
+                <div className='my-8 border-b-[1px] border-b-[#b8afaf]'>
                     <h1 className='my-3 md:mx-0 mx-3'>Mi Carrito</h1>
                 </div>
                 {cartItems.length != 0 ? cartItems.map((data) => (
@@ -28,7 +33,7 @@ const Carrito = () => {
                                 </div>
                             </div>
                             <div className='flex w-40 justify-evenly '>
-                                <label className='md:ml-0 ml-5'>$120.00</label>
+                                <label className='md:ml-0 ml-5'>${calculateProductTotal(data)}</label>
                                 <span className='ml-3'>X</span>
                             </div>
                         </div>
