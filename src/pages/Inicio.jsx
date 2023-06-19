@@ -1,40 +1,38 @@
-import IMG0 from '../assets/img1.jpg';
-import IMG1 from '../assets/1.jpg';
-import IMG2 from '../assets/2.jpg';
-import IMG3 from '../assets/3.jpg';
-import IMG4 from '../assets/4.jpg';
-import IMG5 from '../assets/5.jpg';
+import IMG0 from '../assets/img1-1.jpg';
 import IMG7 from '../assets/7.jpg';
-import IMG8 from '../assets/8.jpg';
-import IMG9 from '../assets/9.jpg';
+import IMG8 from '../assets/eyes.jpg';
+import IMG9 from '../assets/face.jpg';
+import IMG10 from '../assets/lips.jpg';
 import { Link } from 'react-router-dom';
 import { Images } from '../ImageObject/Images';
 import Card from '../components/imageCard/Card';
+import Carrusel from '../components/carrusel/Carrusel';
 
 const Inicio = () => {
+
   return (
     <>
-    <div className='bg-[#ff97d9]'>
-        <div className='h-[400px] flex justify-end bg-[#e5b3fe]'>
-          <div className='w-full'>
-            <div className='absolute top-24 left-0 md:p-10 md:ml-[17%]'>
+    <div className='bg-[#ffffff]'>
+        <div className='w-full h-screen bg-belleza1 bg-cover flex justify-end bg-[#e5b3fe]'>
+          <div className='w-full text-[#663581]'>
+            {/* <div className='absolute top-24 left-0 md:p-10 md:ml-[17%]'>
               <span>NUEVO LANZAMIENTO</span>
               <h1 className='font-bold md:text-4xl text-xl my-5'>Polvos mas brillosos</h1>
               <div>
               <p className='w-96'>Conoce nuestras nuevas sombras de ojos con un acabado brillante, textura suave y ligera y fijación de 10 horas</p>
               <div className='mt-5'>
-                <button className='border-black border-[1px] w-32 h-10'>
+                <button className='border-[#663581] border-[1px] w-32 h-10 hover:border-none hover:bg-[#663581] hover:text-[#e5b3fe]'>
                   Comprar
                 </button>
               </div>
               </div>
-            </div>
+            </div> */}
           </div>
-          <div className='w-full text-end'>
+          {/* <div className='w-full text-end'>
             <img src={IMG0} className='w-full h-full' />
-          </div>
+          </div> */}
         </div>
-        <div className='w-full h-full mb:p-2 mb-10' id='masvendido'>
+        <div className='w-full h-full mb:p-2 mb-10 py-10' id='masvendido'>
           <div className='py-5 my-5'>
           <h2 className='text-center text-xl p-2'>Imprescindibles</h2>
           <h1 className='text-center font-bold text-4xl'>
@@ -51,9 +49,9 @@ const Inicio = () => {
                 )
               }
           </div>
-          <div className='text-center md:m  y-5 my-8'>
+          <div className='text-center md:my-12 my-8'>
             <Link to={"/bellezaProject/masvendido"}>
-              <button className='border-black hover:bg-black hover:text-[#ff97d9] border-[1px] w-56 h-10'>Comprar mas vendidos</button>
+              <button className='border-black font-semibold hover:bg-black hover:text-[#ffffff] border-[1px] w-56 h-10'>Comprar mas vendidos</button>
             </Link>
           </div>
         </div>  
@@ -80,17 +78,17 @@ const Inicio = () => {
           <div className='p-5 '>
             <h1 className='text-center font-bold text-2xl'>Descubre Mas</h1>
           </div>
-            <div className='md:h-[38rem] bg-[#ff97d9]'> 
+            <div className='md:h-[38rem]'> 
             <div className='md:h-[38rem] md:relative z-10'>
                   <div className='flex md:flex-row flex-col md:justify-evenly'>
                     <div className='md:w-[345px] md:h-[520px] w-full h-[320px]'>
                       <img src={IMG8} className='w-full h-full' />
                     </div>
                     <div className='md:w-[345px] md:h-[520px] w-full h-[320px]'>
-                      <img src={IMG9} className='w-full h-full' />
+                      <img src={IMG9} className='w-full h-full shadow-2xl' />
                     </div>
                     <div className='md:w-[345px] md:h-[520px] w-full h-[320px]'>
-                      <img src={IMG8} className='w-full h-full' />
+                      <img src={IMG10} className='w-full h-full' />
                     </div>
                   </div>
             </div> 
@@ -100,7 +98,8 @@ const Inicio = () => {
         </div>
         <div id='fiveSection'>
           <div className='flex flex-col-reverse md:flex-row h-full top-5 md:relative z-10'>
-            <div className='md:w-1/2 h-[500px] bg-belleza bg-no-repeat bg-fixed'>
+            <div className='md:w-1/2 h-[500px]'>
+              <div className='w-full h-full bg-belleza md:bg-fixed md:bg-contain'></div>
               {/* <img src={IMG10} className='w-full h-full' /> */}
             </div>
             <div className='md:w-1/2 mt-20'>
@@ -125,30 +124,11 @@ const Inicio = () => {
           </div>
         </div>
         <div id='sevenSection'>
-          <div>
             <div>
               <h1 className='text-center font-bold text-xl my-10'>Siguenos</h1>
             </div>
-            <div className='flex flex-col md:flex-row'>
-              <div className='w-full h-[200px]'>
-                <img src={IMG1} className='w-full h-full' />
-              </div>
-              <div className='w-full h-[200px]'>
-                <img src={IMG5} className='w-full h-full'/>
-              </div>
-              <div className='w-full h-[200px]'>
-                <img src={IMG3} className='w-full h-full'/>
-              </div>
-              <div className='w-full h-[200px]'>
-                <img src={IMG8} className='w-full h-full'/>
-              </div>
-              <div className='w-full h-[200px]'>
-                <img src={IMG4} className='w-full h-full'/>
-              </div>
-              <div className='w-full h-[200px]'>
-                <img src={IMG2} className='w-full h-full'/>
-              </div>
-            </div>
+          <div className='w-full'>
+            <Carrusel />
           </div>
         </div>
     </div>

@@ -16,13 +16,13 @@ const Description = () => {
     const inputRef = useRef(null);
   return (
     <>
-        <div className='bg-[#e5b3fe] flex md:flex-row flex-col'>
+        <div className='flex md:flex-row flex-col'>
             <div>
-                <div className='img m-auto border-[1px] border-zinc-500 mr-0 mt-[4.8rem] mb-5 w-full md:w-[550px] h-[350px] md:h-[500px]'>
+                <div className='img m-auto p-8 mt-[4.8rem] mb-5 w-[350px] md:w-[550px] h-[350px] md:h-[500px] border-[1px] border-black'>
                     <img src={img} className='w-full h-full'/>
                 </div>
                 <div>
-                <p className='md:my-10'>Descripción del producto. Describe tu producto de forma clara y precisa. Usa palabras únicas.</p> 
+                <p className='mx-5 md:my-10'>Descripción del producto. Describe tu producto de forma clara y precisa. Usa palabras únicas.</p> 
                 </div>
             </div>
             <div >
