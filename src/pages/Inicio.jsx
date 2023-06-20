@@ -10,23 +10,27 @@ import Carrusel from '../components/carrusel/Carrusel';
 
 const Inicio = () => {
 
+//663581
+  
   return (
     <>
     <div className='bg-[#ffffff]'>
-        <div className='w-full h-screen bg-belleza1 bg-cover flex justify-end bg-[#e5b3fe]'>
-          <div className='w-full text-[#663581]'>
-            {/* <div className='absolute top-24 left-0 md:p-10 md:ml-[17%]'>
+        <div className='w-full h-[400px] md:h-[43.6rem] bg-belleza1 md:bg-cover bg-no-repeat bg-contain flex justify-end bg-[#896491]'>
+          <div className='w-full text-[#ffffff]'>
+            <div className='md:absolute top-40 md:right-24 md:p-10 text-right my-20 mr-5'>
               <span>NUEVO LANZAMIENTO</span>
-              <h1 className='font-bold md:text-4xl text-xl my-5'>Polvos mas brillosos</h1>
+              <h1 className='font-bold md:text-4xl text-xl md:my-5'>Polvos mas brillosos</h1>
               <div>
-              <p className='w-96'>Conoce nuestras nuevas sombras de ojos con un acabado brillante, textura suave y ligera y fijación de 10 horas</p>
-              <div className='mt-5'>
-                <button className='border-[#663581] border-[1px] w-32 h-10 hover:border-none hover:bg-[#663581] hover:text-[#e5b3fe]'>
-                  Comprar
-                </button>
+                <div className='absolute top-[21.5rem] md:my-0 my-3 mx-5 md:mx-0 text-sm md:text-base text-left'>
+                  <p className='w-96'>Conoce nuestras nuevas sombras de ojos con un acabado brillante, textura suave y ligera y fijación de 10 horas</p>
+                  <div className='mt-5'>
+                    <button className='border-[#663581] border-[1px] w-32 h-10 hover:border-none hover:bg-[#663581] hover:text-[#e5b3fe]'>
+                      Comprar
+                    </button>
+                  </div>
+                </div>
               </div>
-              </div>
-            </div> */}
+            </div>
           </div>
           {/* <div className='w-full text-end'>
             <img src={IMG0} className='w-full h-full' />
