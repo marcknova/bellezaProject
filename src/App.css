@@ -13,3 +13,15 @@ selector::after {
   font-family: "Font Awesome 6 Pro";
   font-weight: 100;
 }
+
+.file-input-container .file-input {
+  display: none;
+}
+
+.file-input-container .file-label {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #d059d4;
+  color: #ffffff;
+  cursor: pointer;
+}

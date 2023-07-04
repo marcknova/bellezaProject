@@ -15,13 +15,13 @@ const Inicio = () => {
   return (
     <>
     <div className='bg-[#ffffff]'>
-        <div className='w-full h-[400px] md:h-[43.6rem] bg-belleza1 md:bg-cover bg-no-repeat bg-contain flex justify-end bg-[#896491]'>
+        <div className='w-full h-[400px] md:h-[43.6rem] bg-[url(./src/assets/img1-1.jpg)] md:bg-cover bg-no-repeat bg-contain flex justify-end bg-[#896491]'>
           <div className='w-full text-[#ffffff]'>
-            <div className='md:absolute top-40 md:right-24 md:p-10 text-right my-20 mr-5'>
+            <div className='md:absolute top-40 md:right-24 md:p-10 text-right my-20 md:my-0 mr-5'>
               <span>NUEVO LANZAMIENTO</span>
               <h1 className='font-bold md:text-4xl text-xl md:my-5'>Polvos mas brillosos</h1>
               <div>
-                <div className='absolute top-[21.5rem] md:my-0 my-3 mx-5 md:mx-0 text-sm md:text-base text-left'>
+                <div className='absolute md:static top-[21.5rem] my-0 md:my-3 mx-5 text-sm md:text-base md:text-right text-left'>
                   <p className='w-96'>Conoce nuestras nuevas sombras de ojos con un acabado brillante, textura suave y ligera y fijación de 10 horas</p>
                   <div className='mt-5'>
                     <button className='border-[#663581] border-[1px] w-32 h-10 hover:border-none hover:bg-[#663581] hover:text-[#e5b3fe]'>
@@ -61,14 +61,16 @@ const Inicio = () => {
         </div>  
         <div id='thirdSection'>
           <div className='flex md:flex-row flex-col mb-5 h-full md:h-[30rem]'>
-            <div className='bg-[#e5b3fe] md:w-[50%] h-full md:p-7'>
-              <div className='p-6 md:my-0 my-6 m-auto'>
-                <span className='md:ml-10'>SUPER SEXY</span>
-                <h1 className='font-extrabold md:text-2xl text-4xl my-4 md:ml-10'>Los labios mas vibrantes</h1>
-                <p className='md:mx-10 md:my-0 my-8'> Párrafo. Haz clic aquí para agregar tu propio texto y editar. Aquí puedes contar tu historia y permitir que tus usuarios sepan más sobre ti.</p>
-                <Link to={'/bellezaProject/labios'}>
-                  <button className='bg-black text-[#e5b3fe] hover:bg-[#e5b3fe] font-semibold hover:text-black my-5 md:ml-10 w-48 h-9 border-[1px] border-black'>Comprar Labiales</button>
-                </Link>
+            <div className='bg-[#896491] text-white md:w-[50%] h-full md:p-7'>
+              <div className='p-6 md:my-0 my-10 m-auto'>
+                <div className='my-12'>
+                  <span className='md:ml-10'>SUPER SEXY</span>
+                  <h1 className='font-extrabold md:text-2xl text-4xl my-4 md:ml-10'>Los labios mas vibrantes</h1>
+                  <p className='md:mx-10 md:my-0 my-8'> Párrafo. Haz clic aquí para agregar tu propio texto y editar. Aquí puedes contar tu historia y permitir que tus usuarios sepan más sobre ti.</p>
+                  <Link to={'/bellezaProject/labios'}>
+                    <button className='bg-black text-[#e5b3fe] hover:bg-[#e5b3fe] font-semibold hover:text-black my-5 md:ml-10 w-48 h-9 border-[1px] border-black'>Comprar Labiales</button>
+                  </Link>
+                </div>
               </div>
             </div>
             <div className='md:absolute right-20 md:w-[50%] min-h-[50%]'>
@@ -103,7 +105,7 @@ const Inicio = () => {
         <div id='fiveSection'>
           <div className='flex flex-col-reverse md:flex-row h-full top-5 md:relative z-10'>
             <div className='md:w-1/2 h-[500px]'>
-              <div className='w-full h-full bg-belleza md:bg-fixed md:bg-contain'></div>
+              <div className='w-full h-full bg-belleza md:bg-fixed bg-cover md:bg-contain'></div>
               {/* <img src={IMG10} className='w-full h-full' /> */}
             </div>
             <div className='md:w-1/2 mt-20'>
@@ -115,7 +117,7 @@ const Inicio = () => {
           </div>
         </div>
         <div id='sixSection'>
-          <div className='w-full h-auto bg-[#e5b3fe]'>
+          <div className='w-full h-auto bg-[#896491] text-white'>
             <div className='flex flex-col md:flex-row p-5 md:m-5'>
               <div className='md:w-[40%] h-full m-auto text-center'>
                 <h1 className='font-bold text-xl md:mt-0 mt-5'>Cuidados para la piel</h1>
