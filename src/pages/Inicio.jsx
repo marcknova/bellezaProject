@@ -4,13 +4,24 @@ import IMG8 from '../assets/eyes.jpg';
 import IMG9 from '../assets/face.jpg';
 import IMG10 from '../assets/lips.jpg';
 import { Link } from 'react-router-dom';
-import { Images } from '../ImageObject/Images';
+import { getProductData } from '../ImageObject/Images';
 import Card from '../components/imageCard/Card';
 import Carrusel from '../components/carrusel/Carrusel';
+import { useState, useEffect } from 'react';
 
 const Inicio = () => {
-
 //663581
+  const [productData, setProductData] = useState([]);
+
+  useEffect(() => {
+    getProductData()
+    .then(data => {
+      setProductData(data.slice(0,6));
+    })
+    .catch(error => {
+      console.error('Error fetching product data:', error);
+    });
+  }, []);
   
   return (
     <>
@@ -46,7 +57,7 @@ const Inicio = () => {
           </div>
           <div className='flex flex-wrap md:p-2 md:m-3 justify-around '>
             {
-              Images.map((data) => 
+              productData.map((data) => 
             <div key={data.id}>
                     <Card children={data} />
             </div>

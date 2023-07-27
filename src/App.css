@@ -14,14 +14,37 @@ selector::after {
   font-weight: 100;
 }
 
-.file-input-container .file-input {
+.file-input-container > div {
   display: none;
 }
 
-.file-input-container .file-label {
+.file-input-container > div:last-child {
   display: inline-block;
   padding: 8px 12px;
   background-color: #d059d4;
   color: #ffffff;
   cursor: pointer;
+}
+
+/* page transition */
+
+.page-transition {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.page-transition.enter {
+  opacity: 0;
+}
+
+.page-transition.enter-active {
+  opacity: 1;
+}
+
+.page-transition.exit {
+  opacity: 1;
+}
+
+.page-transition.exit-active {
+  opacity: 0;
 }

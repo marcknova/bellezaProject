@@ -1,16 +1,14 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 const Card = ({ children }) => {
   const [isHovered, setIsHovered] =useState(false);
-
   const { 
     id,
     img, 
-    imgHover,
-    value,
-    nombre, 
-    precio 
+    imghover,
+    price,
+    name, 
   } = children
 
   const HandleMouseEnter = () => {
@@ -27,29 +25,32 @@ const Card = ({ children }) => {
       state: { 
         id: id,
         img: img,
-        name: nombre,
-        prize: precio,
-        value: value
+        name: name,
+        prize: price
       }
     },
     );
   }
 
   return (
-    <div onClick={toDescription} className="cursor-pointer">
-        <div className='w-[190px] h-[190px]'>
-            <img 
-              src={isHovered ? imgHover : img }  
-              className='w-full h-full p-5' 
-              onMouseEnter={HandleMouseEnter}
-              onMouseLeave={HandleMouseLeve}
-            />
-        </div>
-        <div className='w-[190px]'>
-            <h2 className='mx-2 text-sm text-center mb-2'>{nombre}</h2>
-            <span className='block text-center'>{precio}</span>
-        </div>
-    </div>
+    <Link to={`/bellezaProject/view/description?id=${id}&img=${img}&name=${name}&price=${price}`}>
+      <div>
+          <div className='w-[190px] h-[190px]'>
+              <img 
+                src=
+                { isHovered ? 
+                  `http://localhost:3001/uploads/${imghover}` : `http://localhost:3001/uploads/${img}` }  
+                className='w-full h-full p-5' 
+                onMouseEnter={HandleMouseEnter}
+                onMouseLeave={HandleMouseLeve}
+              />
+          </div>
+          <div className='w-[190px]'>
+              <h2 className='mx-2 text-sm text-center mb-2'>{name}</h2>
+              <span className='block text-center'>${price}</span>
+          </div>
+      </div>
+    </Link>
   )
 }
 

@@ -11,7 +11,7 @@ export const HamburgerProvider = ({children}) => {
   useEffect(() => {
     let total = 0;
     cartItems.forEach(item => {
-      total += item.quantity * item.value
+      total += item.quantity * item.price
     });
     setCartTotal(total);
   },[cartItems]);
@@ -41,4 +41,3 @@ export const HamburgerProvider = ({children}) => {
     </HamburgerContext.Provider>
   );
 };
-

@@ -35,7 +35,6 @@ const Navbar = () => {
 
   const handleDeleteCookie = () => {
     removeCookie('userToken', { path: '/' });
-    window.location.reload();
   }
 // e5b3fe 
   return (

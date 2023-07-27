@@ -3,7 +3,7 @@ import img from '../assets/3ina-sombra-de-ojos-en-crema-maquillaje-removebg-prev
 
 const LomasNuevo = () => {
   return (
-    <>
+    <div className="page">
     <div className='bg-gradient-to-r from-cyan-500 to-blue-500'>
       <div className='bg-moresale h-[240px]'>
           {/* <img src={IMG1} className='w-full h-full' /> */}
@@ -58,7 +58,7 @@ const LomasNuevo = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

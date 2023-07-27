@@ -10,3 +10,25 @@
 #menu li:hover {
   background: #85578f;
 }
+
+
+.page-transition {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.page-transition.enter {
+  opacity: 0;
+}
+
+.page-transition.enter-active {
+  opacity: 1;
+}
+
+.page-transition.exit {
+  opacity: 1;
+}
+
+.page-transition.exit-active {
+  opacity: 0;
+}

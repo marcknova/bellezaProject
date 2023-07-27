@@ -11,7 +11,12 @@ const Description = () => {
     const { addToCart } = useContext(HamburgerContext);
 
     const location = useLocation();
-    const {id, img, name, prize, value} = location.state
+    const queryParams = new URLSearchParams(location.search);
+    const id = queryParams.get("id");
+    const img = queryParams.get("img");
+    const name = queryParams.get("name");
+    const prize = queryParams.get("price");
+  
 
     const inputRef = useRef(null);
   return (
@@ -19,7 +24,7 @@ const Description = () => {
         <div className='flex md:flex-row flex-col'>
             <div>
                 <div className='img m-auto p-8 mt-[4.8rem] mb-5 w-[350px] md:w-[550px] h-[350px] md:h-[500px] border-[1px] border-black'>
-                    <img src={img} className='w-full h-full'/>
+                    <img src={`http://localhost:3001/uploads/${img}`} className='w-full h-full'/>
                 </div>
                 <div>
                 <p className='mx-5 md:my-10'>Descripción del producto. Describe tu producto de forma clara y precisa. Usa palabras únicas.</p> 
@@ -49,7 +54,6 @@ const Description = () => {
                                     name: name,
                                     price: prize,
                                     img: img,
-                                    value: value,
                                     code: 'SKU:00455',
                                     quantity: parseInt(inputRef.current.value)
                                 }

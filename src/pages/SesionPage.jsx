@@ -20,7 +20,7 @@ const SesionPage = () => {
         e.preventDefault();
         if (username === "admin" && password === "password") {
             const userToken = '4815162342';
-            setCookie('userToken', userToken, { path: '/' });
+            setCookie('userToken', userToken, { path: '/', session: true });
             window.location.reload();
         } else {
           alert("Invalid username or password");
