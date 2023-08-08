@@ -60,11 +60,6 @@ const Navbar = () => {
               </li>
               <li className=" hover:font-semibold ease-in duration-100 cursor-pointer">
                 <div className="p-4">
-                  <Link to="/bellezaProject/blog">Blog</Link>
-                </div>
-              </li>
-              <li className=" hover:font-semibold ease-in duration-100 cursor-pointer">
-                <div className="p-4">
                   <Link to="/bellezaProject/cara">Cara</Link>
                 </div>
               </li>

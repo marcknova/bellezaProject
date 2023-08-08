@@ -124,7 +124,7 @@ const AddProduct = () => {
             </div>
             <div>
               <div className='relative m-12 w-96'>
-                <Select />
+                <Select handleTypeChange={handleTypeChange} value={typeofproduct} />
               </div>
             </div>
           </div>

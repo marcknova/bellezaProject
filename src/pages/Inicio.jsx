@@ -1,4 +1,3 @@
-import IMG0 from '../assets/img1-1.jpg';
 import IMG7 from '../assets/7.jpg';
 import IMG8 from '../assets/eyes.jpg';
 import IMG9 from '../assets/face.jpg';
