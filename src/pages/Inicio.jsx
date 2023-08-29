@@ -25,7 +25,7 @@ const Inicio = () => {
   return (
     <>
     <div className='bg-[#ffffff]'>
-        <div className='w-full h-[400px] md:h-[43.6rem] bg-[url(./src/assets/img1-1.jpg)] md:bg-cover bg-no-repeat bg-contain flex justify-end bg-[#896491]'>
+        <div className='w-full h-[800px] md:h-[43.6rem] bg-[url(./src/assets/img1-1.jpg)] md:bg-cover bg-no-repeat bg-contain flex justify-end bg-[#896491]'>
           <div className='w-full text-[#ffffff]'>
             <div className='md:absolute top-40 md:right-24 md:p-10 text-right my-20 md:my-0 mr-5'>
               <span>NUEVO LANZAMIENTO</span>

@@ -112,14 +112,14 @@ const AddProduct = () => {
       </div>
         </div>
           </div>
-          <div className='flex flex-wrap justify-center'>
-            <div>
+          <div className='grid grid-cols-2 grid-rows-2'>
+            <div className="mx-auto">
               <Input label="Name" value={nameProduct} onChange={handleNameChange} />
             </div>
             <div>
               <Input label='Price' value={price} onChange={handlePriceChange} />
             </div>
-            <div>
+            <div  className="mx-auto">
               <Input label="Description" value={description} onChange={handleDescriptionChange} />
             </div>
             <div>

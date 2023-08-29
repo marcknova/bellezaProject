@@ -14,6 +14,7 @@ import SesionPage from './pages/sesionPage'
 import { ProtectedRoute } from './components/protectedRouter/protectedRouter'
 import { useCookies } from 'react-cookie';
 import AddProduct from './pages/AddProduct'
+import { AdminData } from './pages/AdminData'
 
 // colors
 // ff97d9
@@ -49,7 +50,7 @@ function App() {
                     </ProtectedRoute> } 
                 />
 
-                <Route 
+                <Route
                   path='/bellezaProject/AddProducts' 
                   element={ 
                     <ProtectedRoute
@@ -60,6 +61,19 @@ function App() {
                         <AddProduct />
                     </ProtectedRoute> } 
                 />
+
+            <Route
+              path='/bellezaProject/AdminProducts' 
+              element={ 
+                <ProtectedRoute
+                  redirectTo="/bellezaProject/"
+                  isAllowed={
+                    (user)}
+                >
+                    <AdminData />
+                </ProtectedRoute> } 
+            />
+
           </Routes>
       <Footer />
     </>
