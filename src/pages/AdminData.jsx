@@ -1,6 +1,7 @@
 import React from "react";
 
 export const AdminData = () => {
+  console.log("Admin");
   return (
     <div>
       <div className="px-5 mt-8 mx-5">
