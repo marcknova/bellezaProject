@@ -1,7 +1,7 @@
-import { GoogleLogin } from "@react-oauth/google";
 import React from "react";
 import { useState } from "react";
 import { useCookies } from "react-cookie";
+import GoogleLoginButton from "../components/googleButton/GoogleButton";
 
 const SesionPage = () => {
   const [username, setUsername] = useState("");
@@ -90,15 +90,8 @@ const SesionPage = () => {
               <hr className="border-gray-500" />
             </div>
 
-            <div>
-              <GoogleLogin
-                onSuccess={(credentialResponse) => {
-                  console.log(credentialResponse);
-                }}
-                onError={() => {
-                  console.log("Login Failed");
-                }}
-              />
+            <div className="flex justify-center p-3">
+              <GoogleLoginButton />
             </div>
 
             <div className="text-sm flex justify-between items-center mt-3">

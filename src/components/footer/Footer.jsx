@@ -4,7 +4,7 @@ import "./Footer.css";
 export const Footer = () => {
   return (
     <>
-      <footer>
+      <footer className="absolute w-full">
         <div className="bg-black text-white p-10">
           <div className="md:mx-28 p-10 flex flex-col md:flex-row">
             <div className="md:w-[20%]">
@@ -32,16 +32,8 @@ export const Footer = () => {
                 <span className="font-normal">marck.noval@gmail.com</span>
               </h1>
             </div>
-            <div>
-              <div className="image-container">
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqeOKZ6tkz6lQYMdVpOJTgxSkYvljuWar1hA&usqp=CAU"
-                  alt="Image"
-                />
-              </div>
-            </div>
             <div className="md:w-[35%]">
-              <h1 className="font-extrabold text-end mt-[30%]">
+              <h1 className="font-extrabold text-end mt-0">
                 Todos los derechos reservados
               </h1>
             </div>

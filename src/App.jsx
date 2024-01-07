@@ -25,7 +25,7 @@ function App() {
   const user = cookies.userToken;
 
   return (
-    <>
+    <div>
       <Navbar />
       <Routes location={location}>
         <Route path="/bellezaProject/" element={<Inicio />} />
@@ -68,7 +68,7 @@ function App() {
         />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 }
 

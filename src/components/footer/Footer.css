@@ -26,3 +26,7 @@
 .image-container:hover:after {
     opacity: 1; /* Increase opacity on hover */
 }
+
+.content {
+    min-height: calc(100vh - 40px);
+  }

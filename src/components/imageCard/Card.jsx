@@ -13,18 +13,6 @@ const Card = ({ props }) => {
     setIsHovered(false);
   };
 
-  const navigate = useNavigate();
-  const toDescription = () => {
-    navigate("/bellezaProject/view/description", {
-      state: {
-        id: id,
-        img: img,
-        name: name,
-        prize: price,
-      },
-    });
-  };
-
   return (
     <Link
       to={`/bellezaProject/view/description?id=${id}&img=${img}&name=${name}&price=${price}`}

@@ -1,25 +1,31 @@
 import React from "react";
 import { GoogleLogin } from "@react-oauth/google";
+import { jwtDecode } from "jwt-decode";
+import { useNavigate } from "react-router-dom";
 
 const GoogleLoginButton = () => {
-  const customStyles = {
-    // Add your custom styles here
-    backgroundColor: "#4285f4",
-    color: "#fff",
-    padding: "10px 15px",
-    borderRadius: "50px",
-    cursor: "pointer",
-    witdh: "5rem",
+  const navigate = useNavigate();
+
+  const handleGoogleLoginSuccess = (credentialResponse) => {
+    const decodedToken = jwtDecode(credentialResponse.credential);
+
+    // Store user data in a cookie (you can use a cookie library)
+    document.cookie = `googleToken=${credentialResponse.credential}; path=/`;
+
+    // Redirect to the main page
+    navigate("/main");
+
+    console.log(decodedToken);
+  };
+
+  const handleGoogleLoginError = (error) => {
+    console.error("Google login failed:", error);
   };
 
   return (
     <GoogleLogin
-      // Add your other props here
-      render={(renderProps) => (
-        <button onClick={renderProps.onClick} style={customStyles}>
-          Sign in with Google
-        </button>
-      )}
+      onSuccess={handleGoogleLoginSuccess}
+      onError={handleGoogleLoginError}
     />
   );
 };

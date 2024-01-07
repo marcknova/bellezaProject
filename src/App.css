@@ -6,11 +6,12 @@
   font-family: "Montserrat", sans-serif;
 }
 
+
 .title {
   font-family: "Brygada 1918", serif;
 }
 
-selector::after {
+selector::after { 
   content: "\f07a";
   font-family: "Font Awesome 6 Pro";
   font-weight: 100;
