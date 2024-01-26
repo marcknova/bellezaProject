@@ -3,6 +3,7 @@ import { Unstable_NumberInput as BaseNumberInput } from "@mui/base/Unstable_Numb
 import { styled } from "@mui/system";
 import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
+import { CartContext } from "../../../context/UseCart";
 
 const NumberInput = React.forwardRef(function CustomNumberInput(props, ref) {
   return (
@@ -30,13 +31,12 @@ const NumberInput = React.forwardRef(function CustomNumberInput(props, ref) {
 });
 
 export default function QuantityInput() {
-  const [total, setTotal] = React.useState(0);
+  const { total, setTotal } = React.useContext(CartContext);
 
   const handleChange = (event, value) => {
     setTotal(value);
   };
 
-  console.log("este es el total", total);
   return (
     <NumberInput
       aria-label="Quantity Input"
@@ -78,8 +78,8 @@ const StyledInputRoot = styled("div")(
   color: ${theme.palette.mode === "dark" ? grey[300] : grey[500]};
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
   align-items: center;
+  margin-top: 1.5rem
 `
 );
 

@@ -1,3 +1,5 @@
+import { Password } from "@mui/icons-material";
+
 export const getProductData = () => {
   return fetch("http://localhost:3001/api/products")
     .then((response) => {

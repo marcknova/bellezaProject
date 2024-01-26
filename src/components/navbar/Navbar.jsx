@@ -1,9 +1,10 @@
+import "./Navbar.css";
+import { useContext, useRef, useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import MenuHamburger from "../menuHamburger/MenuHamburger";
-import { useContext, useRef, useState, useEffect } from "react";
 import { HamburgerContext } from "../../context/UseHamburger";
-import { useCookies } from "react-cookie";
-import "./Navbar.css";
+import { CartContext } from "./../../context/UseCart";
+import { AuthContext } from "./../../context/UseAuth";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { IconButton } from "@mui/material";
@@ -12,10 +13,9 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { hamburger, cartSize } = useContext(HamburgerContext);
-  const [cookies, removeCookie] = useCookies(["userToken"]);
-  const isAuthenticated = !cookies.userToken;
-
+  const { hamburger } = useContext(HamburgerContext);
+  const { cartSize } = useContext(CartContext);
+  const { authState, logout } = useContext(AuthContext);
   const menuRef = useRef(null);
   const open = Boolean(anchorEl);
   const location = useLocation();
@@ -32,11 +32,7 @@ const Navbar = () => {
     setAnchorEl(null);
   };
 
-  const handleDeleteCookie = () => {
-    removeCookie("userToken", { path: "/" });
-  };
-
-  // e5b3fe
+  console.log(authState.picture);
   return (
     <div
       className={`text-[#ffffff] ${
@@ -49,7 +45,7 @@ const Navbar = () => {
           <MenuHamburger />
           <div className="p-1 m-2">
             <Link to="/bellezaProject/">
-              <h1 className="text-2xl font-bold text-white">Logo</h1>
+              <h1 className="text-2xl font-bold text-white font-serif">VERO</h1>
             </Link>
           </div>
           <div className="text-[#ffffff]" id="menu">
@@ -91,23 +87,18 @@ const Navbar = () => {
             <div>
               <div className="md:p-0 p-5 text-center md:text-left md:ml-auto">
                 <div className="mx-5">
-                  {isAuthenticated ? (
-                    <Link to="/bellezaProject/login">
-                      <div className="lg:block hidden">
-                        <div className="flex mt-3 text-base">
-                          <i className="fa-solid fa-user"></i>
-                          <h1 className="md:inline-block mx-2">Entrar</h1>
-                        </div>
-                      </div>
-                    </Link>
-                  ) : (
+                  {authState.role === "admin" ? (
                     <>
                       <div
                         onClick={handleClick}
-                        className=" w-10 h-10 border-[1px] border-[#663581] rounded-full cursor-pointer"
+                        className="w-10 h-10 border-[1px] border-[#663581] rounded-full cursor-pointer"
                         ref={menuRef}
                       >
-                        <i className="fa-solid fa-user text-lg mx-[0.70rem] mt-1"></i>
+                        {authState.picture !== "" ? (
+                          <i className="fa-solid fa-user text-lg mx-[0.70rem] mt-1"></i>
+                        ) : (
+                          <img src={authState.picture} alt="lala" />
+                        )}
                       </div>
                       <div>
                         <Menu
@@ -131,22 +122,76 @@ const Navbar = () => {
                               Add Products
                             </MenuItem>
                           </Link>
-                          <div onClick={handleDeleteCookie}>
+                          <div onClick={logout}>
                             <MenuItem onClick={handleClose}>Logout</MenuItem>
                           </div>
                         </Menu>
                       </div>
                     </>
+                  ) : authState.role === "user" ? (
+                    <>
+                      <div
+                        onClick={handleClick}
+                        className="w-10 h-10 border-[1px] border-[#663581] rounded-full cursor-pointer"
+                        ref={menuRef}
+                      >
+                        {authState.picture ? (
+                          <img
+                            src={authState.picture}
+                            className="w-full h-full rounded-full"
+                            alt="lala"
+                          />
+                        ) : (
+                          <i className="fa-solid fa-user text-lg mx-[0.70rem] mt-1"></i>
+                        )}
+                      </div>
+                      <div>
+                        <Menu
+                          className="mt-1"
+                          id="basic-menu"
+                          anchorEl={anchorEl}
+                          open={open}
+                          onClose={handleClose}
+                          MenuListProps={{
+                            "aria-labelledby": "basic-button",
+                          }}
+                        >
+                          <Link to="/bellezaProject/AdminProducts">
+                            <MenuItem onClick={handleClose}>
+                              Admin Product
+                            </MenuItem>
+                          </Link>
+                          <MenuItem onClick={handleClose}>
+                            Productos Comprados
+                          </MenuItem>
+                          <MenuItem onClick={handleClose}>
+                            Profile Edit
+                          </MenuItem>
+                          <div onClick={logout}>
+                            <MenuItem onClick={handleClose}>Logout</MenuItem>
+                          </div>
+                        </Menu>
+                      </div>
+                    </>
+                  ) : (
+                    <Link to="/bellezaProject/login">
+                      <div className="lg:block hidden">
+                        <div className="flex mt-3 text-base">
+                          <i className="fa-solid mt-[0.2rem] fa-user"></i>
+                          <h1 className="md:inline-block mx-2">Entrar</h1>
+                        </div>
+                      </div>
+                    </Link>
                   )}
                 </div>
               </div>
             </div>
             <div>
               <Link to="/bellezaProject/view/carrito">
-                <IconButton aria-label="delete">
+                <IconButton>
                   <ShoppingCartIcon className="text-white" />
                   {cartSize !== 0 ? (
-                    <span className="text-sm absolute right-3 top-6">
+                    <span className="text-sm absolute text-white right-2 top-6">
                       {cartSize}
                     </span>
                   ) : null}

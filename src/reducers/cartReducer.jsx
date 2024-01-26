@@ -1,7 +1,8 @@
 // reducers/cartReducer.js
-const initialState = {
+export const initialState = {
   items: [],
   total: 0,
+  isCorrect: false,
 };
 
 const cartReducer = (state = initialState, action) => {
@@ -48,6 +49,11 @@ const cartReducer = (state = initialState, action) => {
         total: updatedTotal,
       };
 
+    case "CREATE_PRODUCT":
+      return {
+        ...state,
+        isCorrect: action.payload.isCorrect,
+      };
     default:
       return state;
   }

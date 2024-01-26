@@ -1,14 +1,12 @@
 import IMG7 from "../assets/maquillaje_roto_8085.webp";
 import { Link } from "react-router-dom";
-import { getProductData } from "../ImageObject/Images";
+import { getProductData } from "../api/Images";
 import Card from "../components/imageCard/Card";
 import Carrusel from "../components/carrusel/Carrusel";
 import { useState, useEffect } from "react";
 import { CustomButton } from "../components/button/Button";
-import { Footer } from "./../components/footer/Footer";
 
 const Inicio = () => {
-  //663581
   const [productData, setProductData] = useState([]);
 
   useEffect(() => {
@@ -24,7 +22,7 @@ const Inicio = () => {
   return (
     <>
       <div className="bg-[#ffffff]">
-        <div className="w-full lg:h-[100vh] bg-[url(./src/assets/img1-1.jpg)] md:bg-cover bg-no-repeat bg-contain flex justify-end bg-[#896491]">
+        <div className="w-full lg:min-h-screen bg-[url(./src/assets/img1-1.jpg)] md:bg-cover bg-no-repeat bg-contain flex justify-end bg-[#896491]">
           <div className="w-full flex flex-col items-end lg:mx-[12%] lg:my-[6%] lg:py-[9%] p-3 md:my-16 my-4 text-[#ffffff]">
             <div className="md:h-auto h-1/2 ">
               <div className="md:my-0 md:mr-5 my-16 mx-5 lg:px-0 md:px-10 lg:pt-0 md:pt-10">
@@ -81,22 +79,24 @@ const Inicio = () => {
             <div className="bg-[#000000] text-white h-full">
               <div className="flex lg:flex-row-reverse flex-col-reverse">
                 <div className="lg:w-1/2">
-                  <div className="lg:p-10 md:m-12 p-20">
-                    <h1 className="font-bold md:text-4xl text-xl mb-10 ">
-                      BUY WHAT YOU LOVE
-                    </h1>
-                    <p className="leading-8 md:text-base text-sm">
-                      En React, hay varias bibliotecas populares que contienen
-                      componentes de carruseles de imágenes. Estas bibliotecas
-                      suelen ofrecer una amplia variedad de opciones de
-                      personalización y funcionalidades para la creación de
-                      carruseles de imágenes interactivos en tus aplicaciones
-                      web. Algunas de las bibliotecas de carruseles de imágenes
-                      más utilizadas en React son
-                    </p>
-                    <button className=" text-white rounded w-36 h-11 mt-8 hoverBg">
-                      READ MORE
-                    </button>
+                  <div className="lg:p-10 md:mx-12 p-20">
+                    <div className="lg:my-16">
+                      <h1 className="font-bold md:text-4xl text-xl mb-10 ">
+                        BUY WHAT YOU LOVE
+                      </h1>
+                      <p className="leading-8 md:text-base text-sm">
+                        En React, hay varias bibliotecas populares que contienen
+                        componentes de carruseles de imágenes. Estas bibliotecas
+                        suelen ofrecer una amplia variedad de opciones de
+                        personalización y funcionalidades para la creación de
+                        carruseles de imágenes interactivos en tus aplicaciones
+                        web. Algunas de las bibliotecas de carruseles de
+                        imágenes más utilizadas en React son
+                      </p>
+                      <button className=" text-white rounded w-36 h-11 mt-8 hoverBg">
+                        READ MORE
+                      </button>
+                    </div>
                   </div>
                 </div>
                 <div className="lg:w-1/2 h-full">
@@ -164,7 +164,7 @@ const Inicio = () => {
           </div>
         </div>
         <div id="fiveSection">
-          <div className="flex flex-col-reverse lg:flex-row h-full top-5 md:relative z-10">
+          <div className="flex flex-col-reverse lg:flex-row h-full top-5 md:relative z-10 border-[1px] border-y-black">
             <div className="lg:w-1/2 h-[700px]">
               <div className="w-full h-full bg-belleza md:bg-fixed bg-cover md:bg-contain"></div>
             </div>
@@ -193,24 +193,64 @@ const Inicio = () => {
           </div>
         </div>
         <div id="sixSection">
-          <div className="w-full h-auto bg-[#896491] text-white">
-            <div className="flex flex-col lg:flex-row p-5 md:m-5">
-              <div className="md:w-[40%] h-full m-auto text-center">
-                <h1 className="font-bold text-xl md:mt-5 mt-10 text-end">
-                  Cuidados para la piel
+          <div className="w-full h-auto">
+            <div className="p-5">
+              <div className="my-20">
+                <h1 className="font-bold text-2xl md:ml-40 md:mx-0 mx-10">
+                  Compras y envios express a todo mexico
                 </h1>
               </div>
-              <div className="lg:w-[60%] h-full md:ml-16 lg:mr-40 my-10 p-5">
-                <p className="leading-8 lg:ml-28 lg:mx-32">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                  tempore soluta modi vero beatae adipisci. Dolorem et officiis
-                  maiores veniam sapiente? Quam dolores amet blanditiis
-                  doloremque expedita. Porro, exercitationem pariatur. Lorem
-                  ipsum dolor sit amet consectetur adipisicing elit. Magni
-                  tempore soluta modi vero beatae adipisci. Dolorem et officiis
-                  maiores veniam sapiente? Quam dolores amet blanditiis
-                  doloremque expedita. Porro, exercitationem pariatur.
-                </p>
+              <div className="grid md:grid-cols-3 mx-10 md:mx-1 lg:mx-20 my-10 text-center">
+                <div>
+                  <div className="flex justify-center">
+                    <div className="w-[200px] h-[200px]">
+                      <img
+                        src="https://img.freepik.com/premium-vector/black-white-drawing-woman-s-face_495135-726.jpg"
+                        className="w-full h-full"
+                        alt="first"
+                      />
+                    </div>
+                  </div>
+                  <h1 className="lg:text-xl my-5">Escoge tu producto.</h1>
+                  <p className="lg:mx-16 mx-5">
+                    Tenemos una gama muy amplia de productos de belleza y
+                    cuidado para tu cuidado.
+                  </p>
+                </div>
+                <div>
+                  <div className="flex justify-center">
+                    <div className="w-[200px] h-[200px]">
+                      <img
+                        src="https://logowik.com/content/uploads/images/secure-payment2785.jpg"
+                        className="w-full h-full"
+                        alt="cart"
+                      />
+                    </div>
+                  </div>
+                  <h1 className="lg:text-xl my-5">Compra Segura.</h1>
+                  <p className="lg:mx-16 mx-5">
+                    Nuestro sitio fue creado con shopify que brinda la mayor
+                    seguridad en tus compras.
+                  </p>
+                </div>
+                <div>
+                  <div className="flex justify-center">
+                    <div className="w-[200px] h-[200px]">
+                      <img
+                        src="https://static.vecteezy.com/system/resources/thumbnails/002/206/240/small/fast-delivery-icon-free-vector.jpg"
+                        className="w-full h-full"
+                        alt="car"
+                      />
+                    </div>
+                  </div>
+                  <h1 className="lg:text-2xl md:text-base text-xl my-5">
+                    Entregas rapidas y seguras.
+                  </h1>
+                  <p className="lg:mx-16 mx-5">
+                    Tenemos los mejores servicios de logistica y de entrega para
+                    que puedas tener tus productos rápido y de forma segura.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -219,7 +259,9 @@ const Inicio = () => {
           <div>
             <h1 className="text-center font-bold text-xl my-10">Siguenos</h1>
           </div>
-          <div className="w-full md:my-0 my-10"></div>
+          <div className="w-full md:my-0 my-10">
+            <Carrusel />
+          </div>
         </div>
       </div>
     </>

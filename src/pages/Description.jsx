@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { CartContext } from "./../context/UseCart";
 import Accordion from "@mui/material/Accordion";
@@ -6,66 +6,85 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import Snackbar from "@mui/material/Snackbar";
 import QuantityInput from "./../components/inputs/inputNumber/InputNumber";
+import MuiAlert from "@mui/material/Alert";
+
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 const Description = () => {
-  useEffect(() => {
-    window.scroll(0, 0);
-  }, []);
-
-  const { cartState, cartDispatch } = useContext(CartContext);
-  const quantityInputRef = useRef();
+  const [open, setOpen] = React.useState(false);
+  const [type, setType] = React.useState("");
+  const [message, setMessage] = React.useState("");
+  const { cartDispatch, total } = useContext(CartContext);
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
-  const quantity = quantityInputRef;
+
+  const validate = total !== 0 ? false : true;
 
   const products = {
     id: queryParams.get("id"),
     img: queryParams.get("img"),
     name: queryParams.get("name"),
     prize: queryParams.get("price"),
-    // quantity: parseInt(quantity),
+    quantity: total,
   };
 
-  const notify = () =>
-    toast.success("Porducto Agregado", {
-      position: "top-right",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-    });
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
-  console.log("Carrito antes", cartState);
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
 
   const addToCart = () => {
-    console.log("Carrito ahora", cartState);
-    cartDispatch({ type: "ADD_TO_CART", payload: products });
+    if (!validate) {
+      cartDispatch({ type: "ADD_TO_CART", payload: products });
+      setType("success");
+      setMessage("Producto Agregado");
+      handleClick();
+    } else {
+      setType("error");
+      setMessage("Selecciona Una Cantidad");
+      handleClick();
+    }
   };
 
   return (
     <>
-      <div className="flex md:flex-row flex-col p-10">
-        <div>
-          <div className="img ml-auto p-8 mt-[4.8rem] mb-5 w-[350px] md:w-[550px] h-[350px] md:h-[500px] border-[1px] border-black">
-            <img
-              src={`http://localhost:3001/uploads/${products.img}`}
-              className="w-full h-full"
-            />
+      <div className="flex lg:flex-row flex-col p-10 lg:h-[50rem]">
+        <div className="flex flex-col lg:w-1/2 lg:mr-5 lg:mx-0 md:mx-auto">
+          <div>
+            <div className="img ml-auto p-8 mt-[4.8rem] mb-5 w-[300px] md:w-[540px] h-[330px] md:h-[500px] border-[1px]">
+              <img
+                src={`http://localhost:3001/uploads/${products.img}`}
+                className="w-full h-full"
+              />
+            </div>
           </div>
           <div>
-            <p className="mx-5 md:my-10">
-              Descripción del producto. Describe tu producto de forma clara y
-              precisa. Usa palabras únicas.
-            </p>
+            <div>
+              <p className="md:w-[540px] md:ml-auto md:text-base text-sm md:my-0 my-5">
+                Descripción del producto. Lugar ideal para "vender" tu producto
+                y captar la atención del comprador. Describe tu producto de
+                forma clara y precisa. Usa palabras únicas. Escribe tu propia
+                descripción en vez de usar la del fabricante.
+              </p>
+            </div>
           </div>
         </div>
-        <div>
+        <div className="flex justify-center">
           <div className="md:my-20 m-5 md:m-6">
             <div className="flex flex-col">
               <div className="order-2 md:order-none">
@@ -84,7 +103,7 @@ const Description = () => {
               <div className="flex flex-col text-[#ffffff] order-5 md:order-none">
                 <button
                   onClick={addToCart}
-                  className="bg-[#ff97d9] md:w-[300px] h-11 my-2"
+                  className="bg-[#896491] md:w-[300px] h-11 my-2"
                 >
                   Agregar al Carrito
                 </button>
@@ -93,7 +112,7 @@ const Description = () => {
                 </button>
               </div>
               <div className="order-6 md:order-none">
-                <div className="w-96 my-3">
+                <div className="md:w-96 my-3">
                   <Accordion>
                     <AccordionSummary
                       expandIcon={<ExpandMoreIcon />}
@@ -144,8 +163,20 @@ const Description = () => {
                   </Accordion>
                 </div>
                 <div>
-                  <button onClick={notify}>Notify!</button>
-                  <ToastContainer />
+                  <Snackbar
+                    anchorOrigin={{ vertical: "top", horizontal: "right" }}
+                    open={open}
+                    autoHideDuration={3000}
+                    onClose={handleClose}
+                  >
+                    <Alert
+                      onClose={handleClose}
+                      severity={type}
+                      sx={{ width: "100%" }}
+                    >
+                      {message}
+                    </Alert>
+                  </Snackbar>
                 </div>
               </div>
             </div>

@@ -11,18 +11,16 @@ import Description from "./pages/Description";
 import { Footer } from "./components/footer/Footer";
 import Carrito from "./pages/Carrito";
 import { ProtectedRoute } from "./components/protectedRouter/protectedRouter";
-import { useCookies } from "react-cookie";
 import AddProduct from "./pages/AddProduct";
 import { AdminData } from "./pages/AdminData";
 import SesionPage from "./pages/SesionPage";
-
-// colors
-// ff97d9
-// e5b3fe
+import { useContext } from "react";
+import { AuthContext } from "./context/UseAuth";
+import GoogleCallbackPage from "./pages/GoogleCallbackPage";
 
 function App() {
-  const [cookies] = useCookies(["userToken"]);
-  const user = cookies.userToken;
+  const { authState } = useContext(AuthContext);
+  const user = authState.role;
 
   return (
     <div>
@@ -34,6 +32,10 @@ function App() {
         <Route path="/bellezaProject/cara" element={<Cara />} />
         <Route path="/bellezaProject/labios" element={<Labios />} />
         <Route path="/bellezaProject/ojos" element={<Ojos />} />
+        <Route
+          path="/bellezaProject/google-profile"
+          element={<GoogleCallbackPage />}
+        />
         <Route
           path="/bellezaProject/view/description"
           element={<Description />}
@@ -52,7 +54,10 @@ function App() {
         <Route
           path="/bellezaProject/AddProducts"
           element={
-            <ProtectedRoute redirectTo="/bellezaProject/" isAllowed={user}>
+            <ProtectedRoute
+              redirectTo="/bellezaProject/"
+              isAllowed={!!user && user.includes("admin")}
+            >
               <AddProduct />
             </ProtectedRoute>
           }

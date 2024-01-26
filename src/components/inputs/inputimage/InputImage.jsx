@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./InputImage.module.css";
 
-const InputImage = ({ onChange, inputId }) => {
+const InputImage = ({ onChange, inputId, label }) => {
   const handleImageChange = (event) => {
     const file = event.target.files[0];
     if (file) {
@@ -16,7 +16,7 @@ const InputImage = ({ onChange, inputId }) => {
   return (
     <div className={styles["file-input-container"]}>
       <label htmlFor={inputId} className={styles["file-label"]}>
-        Select Image
+        {label}
       </label>
       <input
         type="file"

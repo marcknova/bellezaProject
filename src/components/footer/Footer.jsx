@@ -4,7 +4,7 @@ import "./Footer.css";
 export const Footer = () => {
   return (
     <>
-      <footer className="absolute w-full">
+      <footer className=" w-full">
         <div className="bg-black text-white p-10">
           <div className="md:mx-28 p-10 flex flex-col md:flex-row">
             <div className="md:w-[20%]">

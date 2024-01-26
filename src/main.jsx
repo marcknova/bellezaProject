@@ -4,16 +4,16 @@ import App from "./App";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import { HamburgerProvider } from "./context/UseHamburger";
-import { GoogleOAuthProvider } from "@react-oauth/google";
 import { CartProvider } from "./context/UseCart";
+import { AuthProvider } from "./context/UseAuth";
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <GoogleOAuthProvider clientId="815693817413-242tnhrknia8fav0ivq8l6eblumtnje0.apps.googleusercontent.com">
-    <BrowserRouter>
-      <HamburgerProvider>
-        <CartProvider>
+  <BrowserRouter>
+    <HamburgerProvider>
+      <CartProvider>
+        <AuthProvider>
           <App />
-        </CartProvider>
-      </HamburgerProvider>
-    </BrowserRouter>
-  </GoogleOAuthProvider>
+        </AuthProvider>
+      </CartProvider>
+    </HamburgerProvider>
+  </BrowserRouter>
 );
